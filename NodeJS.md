@@ -1,3 +1,6 @@
 # NodeJS
 - [документация по NodeJS](https://nodejs.org/ru/docs/)
-- [справочник NodeJS а русском](https://nodejsdev.ru/)
+- [справочник NodeJS на русском](https://nodejsdev.ru/)
+
+### Best practice
+- [[Создать самоподписанный SSL сертификат]]
