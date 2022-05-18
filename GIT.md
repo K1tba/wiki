@@ -2,6 +2,8 @@
 
 Почитать:
 [Неплохая статья про GIT](https://techrocks.ru/2022/02/02/git-github-learning-games/)
+[Заметки про GIT и не только...](https://github.com/rsajob/docs/wiki/#git)
+
 
 
 1) генерация ssh ключа
