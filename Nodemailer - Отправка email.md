@@ -48,6 +48,10 @@ nodemailer.createTestAccount((err, account) => {
     })
 ```
 
+>Из документации:
+>-   port — это порт для подключения (по умолчанию 587, если _secure_ равен _false_ или 465, если _true_ )
+
+
 Проверить соединение:
 ```
 transport.verify(function (error, success) {

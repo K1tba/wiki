@@ -13,3 +13,12 @@
 
 Переключиться на ветку:
 `git checkout testing`
+
+Вывести список всех веток
+`git branch`
+
+"Подтянуть" отстающую ветку
+```
+git checkout first
+git merge first main
+```
