@@ -7,4 +7,4 @@
 - `$cfg['ExecTimeLimit'] = 10000;` - максимальное время для импорта
 
 ### Ubuntu  
-найти директоирю с phpmyadmin в ubuntu: `find / -iname "phpmyadmin*" -type d`
+найти директорию с phpmyadmin в [[Ubuntu]]: `find / -iname "phpmyadmin*" -type d`
