@@ -3,7 +3,6 @@
 - [Пользователи в LINUX](https://techlist.top/linux-users-types-of-users/)
 - [Как узнать IP-адрес Linux](https://losst.ru/kak-uznat-ip-adres-linux)
 
-
 [[Создать самоподписанный SSL сертификат]]
 [[посмотреть куда установлена программа]]
 
@@ -15,4 +14,10 @@
 Найти директорию с phpmyadmin: 
 ```
 find / -iname "phpmyadmin*" -type d
+```
+
+Поиск по командам [[Docker]]-a и их описаниям совпадения с "cont":
+```
+$ docker help | grep cont
+
 ```
