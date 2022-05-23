@@ -33,3 +33,36 @@ SHOW TABLES;
 ```
 SELECT NOW() as now;
 ```
+
+
+
+Решение задачи на объединение:
+дана таблица
+| code | user |
+/--------------
+| 1    | Mary |
+/--------------
+| 2    | Alex |
+/--------------
+| 1    | Ann  |
+
+Чтобы получить всех user-ов одной строкой с одинаковыми кодами можно выполнить следующие:
+```
+SELECT code, GROUP_CONCAT(user SEPARATOR ', ') FROM table_name GROUP BY code;
+```
+
+| code | user |
+/--------------
+| 1    | Mary, Ann |
+/--------------
+| 2    | Alex |
+/--------------
+
+Более интересный вариант
+```
+CREATE TEMPORARY TABLE temptable SELECT code, GROUP_CONCAT(user SEPARATOR ', ') AS manager FROM test GROUP BY code;
+
+SELECT * FROM temptable;
+
+UPDATE test T SET full=(SELECT manager FROM temptable M WHERE T.code=M.code);
+```
