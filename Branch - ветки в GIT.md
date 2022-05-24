@@ -14,6 +14,12 @@
 Переключиться на ветку:
 `git checkout testing`
 
+Создать ветку и сразу на неё переключиться:
+`git checkout -b new_branch`
+
+Перенести ветку на коммит:
+`git branch -f hash_commit`
+
 Вывести список всех веток
 `git branch`
 
