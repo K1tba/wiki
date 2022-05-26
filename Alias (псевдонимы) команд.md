@@ -2,12 +2,12 @@
 
 Поиск файла:
 
-`sudo find / -name "hrc"`
-
-/home/geos/.bashrc
-
+```
+sudo find / -name "hrc"
 ```
 
-alias foo='ls -l'
+в файле __/home/geos/.bashrc_  добавить:
 
+```
+alias foo='ls -l'
 ```

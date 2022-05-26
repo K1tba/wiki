@@ -17,6 +17,18 @@ git remote add origin git@github.com:GeoS74/weed.git
 git push -u origin main # -u - привязать локальную ветку к удалённой
 ```
 
+[зачем нужен upstream в GIT](https://stackoverflow.com/questions/17122245/what-is-a-git-upstream)
+
+```
+git push -u origin main
+```
+это короткая форма:
+```
+git branch --set-upstream-to my_branch origin/my_branch
+git push
+```
+
+
 2) получение репозитория
 `git clone https://github.com/GeoS74/weed.git direct` (здесь direct это какая-то папка, которая будет создана если её нет)
 

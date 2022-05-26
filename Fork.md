@@ -7,7 +7,9 @@
 `git remote add upstream <ссылка на репозиторий>`
 
 проверить:
-`git remote -v`
+```
+git remote -v
+```
 (origin - черновик(fork), upstream - основной репозиторий)
 
 ```
