@@ -1,4 +1,7 @@
 # HTTP
+
+- [Лучшее объяснение HTTPS SSL/TLS](https://howhttps.works/)
+
 - [HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP)
 - [web безопасность](https://infosec.mozilla.org/guidelines/web_security)
 - [Политика того же происхождения](https://en.wikipedia.org/wiki/Same-origin_policy)
