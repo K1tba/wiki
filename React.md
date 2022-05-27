@@ -4,7 +4,8 @@
 [tutorial на русском](https://ru.reactjs.org/tutorial/tutorial.html)
 
 ## Курс по React
-### [[Второе занятие]]
+#### [[Элементы React]]
+#### [[Компоненты React]]
 ## Начало работы
 ### [[Создать проект React]]
 ### [[Добавление React на сайт]]

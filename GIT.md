@@ -28,6 +28,7 @@ git branch --set-upstream-to my_branch origin/my_branch
 git push
 ```
 
+Вообще, при работе с Github команда `git push origin main` работает одинаково как с флагом `-u`, так и без него.
 
 2) получение репозитория
 `git clone https://github.com/GeoS74/weed.git direct` (здесь direct это какая-то папка, которая будет создана если её нет)
@@ -37,3 +38,5 @@ git push
 ### [[Fork]]
 
 ### [[Branch - ветки в GIT]]
+
+### [[GIT cheat sheet]]
