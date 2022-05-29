@@ -1,0 +1,2 @@
+# Оптимизация SVG
+Для оптимизиции SVG-изображений можно использовать [npm пакет SVGO](https://www.npmjs.com/package/svgo). Или какие-то онлайн сервисы типа [SVGOMG](https://jakearchibald.github.io/svgomg/)
