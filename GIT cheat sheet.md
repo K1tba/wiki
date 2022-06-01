@@ -22,6 +22,11 @@ git clone username@host:/path/to/repository
 git status
 ```
 
+**show** untracked file change status
+```
+git status -u
+```
+
 
 **add** changes to INDEX
 ```
