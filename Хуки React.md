@@ -28,3 +28,7 @@ export const Product = ({name}) => {
 	</div>)
 }
 ```
+
+##### Стандартные хуки [[React]]
+1. [[useState]]
+2. [[useReducer]]
