@@ -1,4 +1,5 @@
 # PostgreSQL
+[[Установка PostgreSQL]]
 
 Основная командная оболочка это `psql` - в зависимоти от платформы вызывается по разному (см. ссылки ниже). Причем в Windows для запуска надо находится в директории дистрибутива PostgreSQL. Путь по умолчанию: 
 `C:\Program Files\PostgreSQL\14\bin`
@@ -10,11 +11,16 @@
 Значения по умолчанию:
 * пользователь: postgres
 * порт: 5432
-* пароль по умолчанию не может быть пустым (попробуй admin)
+* пароль при установки на Windows запрашивается усиановщиком и не может быть пустым (попробуй admin), при установке на [[Ubuntu]] - пароль пустой или я хз какой. В любом случае его лучше установить.
+
+Установка пароля для пользователя postgres:
+1. Выполнить [[Подключение к psql|подключение к psql]]
+2. Выполнить `\password postgres`
 
 [Начало работы в Windows](https://winitpro.ru/index.php/2019/10/25/ustanovka-nastrojka-postgresql-v-windows/)
-
 [Начало работы в Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04-ru)
+
+[[Подключение к psql]]
 
 Показать список БД:
 `\l`
