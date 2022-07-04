@@ -6,6 +6,7 @@
 ### [[MongoDB]]
 ### [[React]]
 ### [[MySQL]]
+### [[PostgreSQL]]
 ### [[Markdown]]
 ### [[SVG]]
 ### Projects
