@@ -80,3 +80,13 @@ title
 -----
 disc
 ```
+
+Допускается множественное наследование таблиц.
+
+### Сгенерированные столбцы
+Пример:
+```
+CREATE TABLE books (author text, page int DEFAULT 3, all_pages GENERATED ALWAYS AS (page + 150) STORED);
+```
+
+[Подробнее про сгенерированные столбцы](https://www.postgresql.org/docs/current/ddl-generated-columns.html)
