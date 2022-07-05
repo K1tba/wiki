@@ -90,3 +90,17 @@ CREATE TABLE books (author text, page int DEFAULT 3, all_pages GENERATED ALWAYS 
 ```
 
 [Подробнее про сгенерированные столбцы](https://www.postgresql.org/docs/current/ddl-generated-columns.html)
+### Ограничения
+При создании таблиц можно устанавливать ограничения на значения.
+Пример сразу 3-х вариантов ограничений:
+```
+CREATE TABLE books (
+	title text, 
+	pages int CHECK (pages > 5),
+	weight int CONSTRAINT positiveWeight CHECK (weight > 15),
+	CHECK (weight > pages)
+)
+```
+[Подробнее про ограничения](https://www.postgresql.org/docs/current/ddl-constraints.html)
+Если при записи будут нарушены проверки, то будет сгенерирована ошибка. Если (в данном примере) вес будет ниже 15 - в тексте ошибки будет указан псевдоним проверки `positiveWeight`. 
+Порядок выполнения проверок: сначала выполнится проверка `CHECK (weight > pages)`, а затем проверки начнут выполняться "сверху вниз".

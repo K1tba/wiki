@@ -94,3 +94,4 @@ SELECT $$foo'bar$$;
 SELECT $Some Tag$foo'bar$Some Tag$;
 ```
 [Подробнее про константы](https://www.postgresql.org/docs/current/sql-syntax-lexical.html#SQL-SYNTAX-CONSTANTS)
+### [[Представления]]
