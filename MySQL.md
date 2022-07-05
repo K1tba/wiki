@@ -66,3 +66,5 @@ SELECT * FROM temptable;
 
 UPDATE test T SET full=(SELECT manager FROM temptable M WHERE T.code=M.code);
 ```
+
+### [[SQL JOINS]]

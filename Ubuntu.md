@@ -3,22 +3,12 @@
 - [Пользователи в LINUX](https://techlist.top/linux-users-types-of-users/)
 - [Как узнать IP-адрес Linux](https://losst.ru/kak-uznat-ip-adres-linux)
 
-[[Создать самоподписанный SSL сертификат]]
-[[посмотреть куда установлена программа]]
-[[VPN для Ubuntu]]
-[[sudo]]
+- [[Создать самоподписанный SSL сертификат]]
+- [[посмотреть куда установлена программа]]
+- [[VPN для Ubuntu]]
+- [[sudo]]
 
-[Работа с пакетами apt-get](https://wiki.debian.org/AptCLI)
-
-Для поиска директорий программы надо запустить
- ```
- $ whereis apache2
- ```
-
-Найти директорию с phpmyadmin: 
-```
-find / -iname "phpmyadmin*" -type d
-```
+- [Работа с пакетами apt-get](https://wiki.debian.org/AptCLI)
 
 Поиск по командам [[Docker]]-a и их описаниям совпадения с "cont":
 ```

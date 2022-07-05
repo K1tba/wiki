@@ -1,6 +1,8 @@
 # PostgreSQL
 [[Установка PostgreSQL]]
 
+[[Подключение к psql]]
+
 Основная командная оболочка это `psql` - в зависимоти от платформы вызывается по разному (см. ссылки ниже). Причем в Windows для запуска надо находится в директории дистрибутива PostgreSQL. Путь по умолчанию: 
 `C:\Program Files\PostgreSQL\14\bin`
 
@@ -13,23 +15,13 @@
 * порт: 5432
 * пароль при установки на Windows запрашивается усиановщиком и не может быть пустым (попробуй admin), при установке на [[Ubuntu]] - пароль пустой или я хз какой. В любом случае его лучше установить.
 
-Установка пароля для пользователя postgres:
-1. Выполнить [[Подключение к psql|подключение к psql]]
-2. Выполнить `\password postgres`
+### Установка пароля для пользователя postgres:
 
-[Начало работы в Windows](https://winitpro.ru/index.php/2019/10/25/ustanovka-nastrojka-postgresql-v-windows/)
-[Начало работы в Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04-ru)
+Установка пароля возможна из CLI psql, для начала [[Подключение к psql|запустить psql]], затем выполнить:
+```
+\password postgres
+```
 
-[[Подключение к psql]]
-
-Показать список БД:
-`\l`
-
-Показать список таблиц:
-`\d`
-
-Показать список пользователей:
-`\du`
 
 
 ### Создание БД
@@ -45,6 +37,20 @@ CREATE DATABASE foo ENCODING WIN1251 TEMPLATE template0;
 ```
 
 [Поддерживаемые кодировки](https://www.postgresql.org/docs/current/multibyte.html#:~:text=The%20character%20set%20support%20in,8%2C%20and%20Mule%20internal%20code.)
+
+### [[Создание таблиц PostgreSQL]]
+### Некоторые команды
+Показать список БД:
+`\l`
+
+Показать список таблиц и представлений:
+`\d`
+
+Показать список функций:
+`\df`
+
+Показать список пользователей:
+`\du`
 
 ### Турбозагрузка данных
 Работает по аналогии с [[Турбо экспорт данных MariaDB|турбо-загрузкой в MariaDB]] и по ощущениям даже быстрее...
@@ -64,3 +70,27 @@ CREATE TABLE streets (name VARCHAR, ...);
 COPY table_name
 FROM 'absolute path to .csv file'
 DELIMITER 'delimiter' CSV [HEADER] ENCODING 'UTF8';
+```
+[Подробнее о команде COPY](https://www.postgresql.org/docs/current/sql-copy.html)
+
+### [[SQL JOINS]]
+
+### TRANCATE vs DELETE FROM
+Trancate очищает таблицу вместе с индексами, статистикой и т.д. Delete только удаляет записи и всё. Поэтому Delete работает быстрее.
+[TRANCATE vs DELETE FROM](https://www.lob.com/blog/truncate-vs-delete-efficiently-clearing-data-from-a-postgres-table)
+[Postgresql Truncation speed](https://stackoverflow.com/questions/11419536/postgresql-truncation-speed)
+
+### Константы со спец. символами
+Для использования символов типа `\t` в строковых константах, надо писать букву `E` перед самой константой. Пример:
+```
+SELECT E'fo\to';
+```
+Экранирование кавычки:
+```
+SELECT 'foo''bar';
+-- эквивалентно
+SELECT $$foo'bar$$;
+-- эквивалентно
+SELECT $Some Tag$foo'bar$Some Tag$;
+```
+[Подробнее про константы](https://www.postgresql.org/docs/current/sql-syntax-lexical.html#SQL-SYNTAX-CONSTANTS)
