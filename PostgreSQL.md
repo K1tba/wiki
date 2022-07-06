@@ -38,6 +38,7 @@ CREATE DATABASE foo ENCODING WIN1251 TEMPLATE template0;
 
 [Поддерживаемые кодировки](https://www.postgresql.org/docs/current/multibyte.html#:~:text=The%20character%20set%20support%20in,8%2C%20and%20Mule%20internal%20code.)
 
+### [[Дамп БД PostgreSQL]]
 ### [[Создание таблиц PostgreSQL]]
 ### Некоторые команды
 Показать список БД:
