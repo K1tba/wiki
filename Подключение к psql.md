@@ -16,7 +16,7 @@ $ su geos
 ```
 $ sudo -u postgres psql
 ```
-В этом случае psql запускается без смены роли, но при выходе оказываешься в директории `/var/lib/postgresql`
+В этом случае надо ввести пароль не пользователя БД (в данном случае postgres), а пароль админа системы (в моём случае geos). Получается, что в Ubuntu пароль пользователя PostgreSQL нужен только для использования pgAdmin. По крайней мере при подключении к localhost.
 
 [Подробнее про начало работы и создании ролей здесь](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04-ru)
 

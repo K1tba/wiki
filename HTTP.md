@@ -1,11 +1,10 @@
 # HTTP
 
-- [[Методы HTTP]]
+## [[Методы HTTP]]
 
-- [Спецификация RFC2616](https://datatracker.ietf.org/doc/html/rfc2616#section-9.6)
-- [Лучшее объяснение HTTPS SSL/TLS](https://howhttps.works/)
-
+- [Спецификация RFC2616](https://datatracker.ietf.org/doc/html/rfc2616)
 - [HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP)
+-  [Лучшее объяснение HTTPS SSL/TLS](https://howhttps.works/)
 - [web безопасность](https://infosec.mozilla.org/guidelines/web_security)
 - [Политика того же происхождения](https://en.wikipedia.org/wiki/Same-origin_policy)
 - [Совместное использование ресурсов между источниками](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
