@@ -1,5 +1,8 @@
 # HTTP
 
+- [[Методы HTTP]]
+
+- [Спецификация RFC2616](https://datatracker.ietf.org/doc/html/rfc2616#section-9.6)
 - [Лучшее объяснение HTTPS SSL/TLS](https://howhttps.works/)
 
 - [HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP)
