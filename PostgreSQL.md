@@ -33,6 +33,7 @@ CREATE DATABASE foo ENCODING WIN1251 TEMPLATE template0;
 
 ### [[Дамп БД PostgreSQL]]
 ### [[Создание таблиц PostgreSQL]]
+### [[Изменение данных PostgreSQL]]
 ### Некоторые команды
 Показать список БД:
 `\l`
