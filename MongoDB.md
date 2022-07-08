@@ -1,4 +1,7 @@
 # MongoDB
+## [[MongoDB shell (mongosh)]]
+## [[Mongoose]]
+## Дамп базы данных
 Выполнить дамп БД
 ```
 mongodump
