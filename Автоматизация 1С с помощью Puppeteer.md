@@ -1,4 +1,4 @@
-# Автоматизация 1С с помощью Puppeteer
+# Автоматизация 1С с помощью [[Puppeteer]]
 Логин и пароль не сохраняю специально
 ```
 const puppeteer = require('puppeteer');
