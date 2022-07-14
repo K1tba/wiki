@@ -2,6 +2,10 @@
 
 ### Запустить [[Puppeteer]] через Tor
 
+
+https://tor.stackexchange.com/questions/14409/shows-connection-timed-out-on-tor
+
+
 1. В конфиге Tor, который в Windows лежит здесь: 
 ```
 \Tor Browser\Browser\TorBrowser\Data\Tor
