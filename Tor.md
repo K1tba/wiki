@@ -1,7 +1,86 @@
 # Tor
 [настройка Tor](https://wiki.archlinux.org/title/Tor_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 
+[Установка и настройка Tor в Ubuntu](https://help.ubuntu.ru/wiki/tor)
+
+[Tor - рецепты, подсказки](https://hackware.ru/?p=10530)
+
+[Настройка Proxy](https://hackware.ru/?p=10201)
+
+[флудилка на форуме](https://www.cyberforum.ru/ubuntu-linux/thread1587860.html)
+
+[Читай вот это](https://stepsboard.com/ru/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%82%D0%B5-%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80-tor-%D1%81-raspberry-pi-%D0%B4%D0%BB%D1%8F-%D1%83%D0%BF%D1%80%D0%B0)
+
+[Использование torsocks](https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux)
+
+[Устранение проблем с подключением к Tor](https://support.torproject.org/ru/connecting/connecting-2/)
+
 Посмотреть состояние:
 ```
 $ tor
+```
+
+
+[Настройка Tor в Linux](https://www.newalive.net/146-nastroyka-tor-v-linux.html)
+```
+SocksPort 9050 
+SocksPort 10.10.1.25:9100 
+SocksPolicy accept 10.10.1.0/24 
+SocksPolicy reject * 
+Log notice file /var/log/tor/notices.log 
+RunAsDaemon 1 
+DataDirectory /var/lib/tor 
+ORPort 9001 
+Address IP or HOSTNAME 
+Nickname RelayName 
+RelayBandwidthRate 1000 KB 
+RelayBandwidthBurst 2000 KB 
+AccountingMax 100 GB 
+AccountingStart month 1 00:00 
+ContactInfo FirstName LastName <MyName AT MailServer dot com> 
+ExitPolicy reject *:* 
+
+#BridgeRelay 1 
+#PublishServerDescriptor 0
+```
+
+
+Ещё вариант [настройки Tor в Linux](https://www.kobzarev.com/soft/tor/):
+```
+SOKSPort 9050 CacheDNS UseDNSCache
+
+SOCKSPolicy accept private:*,reject *:*
+DataDirectory /var/lib/tor
+Log notice file /var/log/tor/notice.log
+ExcludeExitNodes {ru},{ua},{by},{kz},{??}
+StrictNodes 1
+```
+
+[Ещё вариант настройки](https://eyakubovskiy.ru/2021/09/06/nastroyka-servisa-tor-v-ubuntu-20-04/)
+```
+DataDirectory /var/lib/tor  
+PidFile /run/tor/tor.pid  
+RunAsDaemon 1  
+User debian-tor  
+ControlSocket /run/tor/control GroupWritable RelaxDirModeCheck  
+ControlSocketsGroupWritable 1  
+SocksPort unix:/run/tor/socks WorldWritable  
+CookieAuthentication 1  
+CookieAuthFileGroupReadable 1  
+CookieAuthFile /run/tor/control.authcookie  
+Log notice syslog  
+#AvoidDiskWrites 1  
+SocksPort 127.0.0.1:9150
+```
+
+Перезапустить Tor с новыми настройками:
+```
+$ sudo systemctl enable tor.service  
+$ sudo service tor restart
+```
+
+Или попробовать так:
+```
+$ sudo /etc/init.d/tor restart
+$ sudo /etc/init.d/privoxy restart # Эту команду я не проверял
 ```
