@@ -11,13 +11,24 @@
 
 [Читай вот это](https://stepsboard.com/ru/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%82%D0%B5-%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80-tor-%D1%81-raspberry-pi-%D0%B4%D0%BB%D1%8F-%D1%83%D0%BF%D1%80%D0%B0)
 
-[Использование torsocks](https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux)
+_Приоритетно:_ [Использование torsocks](https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux)
 
 [Устранение проблем с подключением к Tor](https://support.torproject.org/ru/connecting/connecting-2/)
+
+>Погуглить про iptables и netfilter
+
+- [iptables для чайников](https://losst.ru/nastrojka-iptables-dlya-chajnikov)
 
 Посмотреть состояние:
 ```
 $ tor
+```
+
+
+Вариант решения проблемы подключения (в файле torrc):
+```
+SocksPort 9150 
+ControlPort 9151
 ```
 
 
