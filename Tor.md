@@ -100,6 +100,7 @@ $ sudo /etc/init.d/privoxy restart # Эту команду я не провер�
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #### Ещё варианты
 [install TorBrowser](https://torrbrowser.ru/tor-browser-for-linux)
@@ -107,6 +108,8 @@ $ sudo /etc/init.d/privoxy restart # Эту команду я не провер�
 
 [Посмотри настройки protonVPN](https://protonvpn.com/support/linux-vpn-setup/#linux_app)
 =======
+=======
+>>>>>>> main
 Default-ные настройки правил в iptables:
 ```
 Chain INPUT (policy ACCEPT)
@@ -131,5 +134,9 @@ Chain DOCKER-ISOLATION-STAGE-1 (1 references)
 target     prot opt source               destination         
 DOCKER-ISOLATION-STAGE-2  all  --  anywhere             anywhere            
 RETURN     all  --  anywhere             anywhere            
+<<<<<<< HEAD
 ```
 >>>>>>> f4baaa8 (flow)
+=======
+```
+>>>>>>> main
