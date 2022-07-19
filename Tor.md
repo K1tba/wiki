@@ -18,6 +18,7 @@ _Приоритетно:_ [Использование torsocks](https://linuxcon
 >Погуглить про iptables и netfilter
 
 - [iptables для чайников](https://losst.ru/nastrojka-iptables-dlya-chajnikov)
+- [iptables how to](https://help.ubuntu.com/community/IptablesHowTo)
 
 Посмотреть состояние:
 ```
@@ -95,3 +96,10 @@ $ sudo service tor restart
 $ sudo /etc/init.d/tor restart
 $ sudo /etc/init.d/privoxy restart # Эту команду я не проверял
 ```
+
+
+#### Ещё варианты
+[install TorBrowser](https://torrbrowser.ru/tor-browser-for-linux)
+[delete TorBrowser](https://torrbrowser.ru/faq/how-to-uninstall-tor-browser-from-pc)
+
+[Посмотри настройки protonVPN](https://protonvpn.com/support/linux-vpn-setup/#linux_app)
