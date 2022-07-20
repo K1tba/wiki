@@ -1,7 +1,19 @@
 # Tor
+1. [Копать сюда](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html)
+
+Получить свой IP адрес
+
+```
+$ wget -qO - https://api.ipify.org; echo
+```
+
+[Как «торифицировать» вашу оболочку](https://portal.imprezahost.com/knowledgebase/664/Install-Tor-proxy-on-Ubuntu-20.04-Linux.html?language=dutch)
+
 [настройка Tor](https://wiki.archlinux.org/title/Tor_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 
 [Установка и настройка Tor в Ubuntu](https://help.ubuntu.ru/wiki/tor)
+
+[Настройка мостов](https://zalinux.ru/?p=6049)
 
 [Tor - рецепты, подсказки](https://hackware.ru/?p=10530)
 
