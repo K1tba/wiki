@@ -9,6 +9,8 @@ $ wget -qO - https://api.ipify.org; echo
 
 [Как «торифицировать» вашу оболочку](https://portal.imprezahost.com/knowledgebase/664/Install-Tor-proxy-on-Ubuntu-20.04-Linux.html?language=dutch)
 
+## [[Установка и удаление Tor-browser]]
+
 [настройка Tor](https://wiki.archlinux.org/title/Tor_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 
 [Установка и настройка Tor в Ubuntu](https://help.ubuntu.ru/wiki/tor)
@@ -110,8 +112,36 @@ $ sudo /etc/init.d/privoxy restart # Эту команду я не провер�
 ```
 
 
+
 #### Ещё варианты
 [install TorBrowser](https://torrbrowser.ru/tor-browser-for-linux)
 [delete TorBrowser](https://torrbrowser.ru/faq/how-to-uninstall-tor-browser-from-pc)
 
 [Посмотри настройки protonVPN](https://protonvpn.com/support/linux-vpn-setup/#linux_app)
+
+Default-ные настройки правил в iptables:
+```
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+DOCKER-USER  all  --  anywhere             anywhere            
+DOCKER-ISOLATION-STAGE-1  all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+DOCKER     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+
+Chain DOCKER-ISOLATION-STAGE-1 (1 references)
+target     prot opt source               destination         
+DOCKER-ISOLATION-STAGE-2  all  --  anywhere             anywhere            
+RETURN     all  --  anywhere             anywhere            
+```
+
