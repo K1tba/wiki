@@ -73,3 +73,5 @@ wget --mirror -p --convert-links -P ./<Local-Folder> аддресс_сайт
 
 ### Ссылки:
 [wget](https://losst.ru/komanda-wget-linux)
+
+#ubuntu

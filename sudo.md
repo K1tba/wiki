@@ -8,3 +8,5 @@ $ sudo -i
 ```
 $ su geos
 ```
+
+#ubuntu

@@ -1,10 +1,10 @@
 # Tor
 1. [Копать сюда](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html)
 
-Получить свой IP адрес
+Получить свой IP адрес с помощью [[wget]]:
 
 ```
-$ wget -qO - https://api.ipify.org; echo
+$ wget -qO - https://api.ipify.org
 ```
 
 [Как «торифицировать» вашу оболочку](https://portal.imprezahost.com/knowledgebase/664/Install-Tor-proxy-on-Ubuntu-20.04-Linux.html?language=dutch)
@@ -117,7 +117,6 @@ $ sudo /etc/init.d/privoxy restart # Эту команду я не провер�
 [install TorBrowser](https://torrbrowser.ru/tor-browser-for-linux)
 [delete TorBrowser](https://torrbrowser.ru/faq/how-to-uninstall-tor-browser-from-pc)
 
-[Посмотри настройки protonVPN](https://protonvpn.com/support/linux-vpn-setup/#linux_app)
 
 Default-ные настройки правил в iptables:
 ```

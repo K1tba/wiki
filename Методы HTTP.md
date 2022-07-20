@@ -54,3 +54,5 @@
 - 200 если возращается тело;
 - 204 если ответ не имеет тела;
 - [202](https://developer.mozilla.org/ru/docs/Web/HTTP/Status/202) если операция удаления ещё не выполнена.
+
+#http #restAPI #api
