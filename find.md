@@ -94,4 +94,4 @@ $ find . -name "*.html*" -o -name "*.php"
 
 [ещё описание](https://help.ubuntu.com/community/find)
 
-#find
+#find #cli

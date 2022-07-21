@@ -22,4 +22,4 @@ $ sudo netstat -ltupan | grep /tor
 
 [Подробнее здесь...](https://blog.sedicomm.com/2019/02/27/4-sposoba-uznat-kakie-porty-proslushivayutsya-v-linux/)
 
-#ubuntu
+#ubuntu #cli

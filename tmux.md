@@ -97,4 +97,4 @@ $ source ~/.tmux.conf
 [подробно про tmux](https://losst.ru/shpargalka-po-tmux)
 [шпаргалка с хабра](https://habr.com/ru/post/327630/)
 
-#terminal #tmux
+#terminal #tmux #cli

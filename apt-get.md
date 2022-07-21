@@ -70,4 +70,4 @@ $ apt-get clean
 [Работа с пакетами apt](https://wiki.debian.org/AptCLI)
 [Ещё про пакеты и apt-get](https://help.ubuntu.com/community/AptGet/Howto)
 
-#ubuntu
+#ubuntu #cli
