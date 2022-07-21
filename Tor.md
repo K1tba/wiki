@@ -84,6 +84,13 @@ async function start(port) {
 
 ### Почитать
 
+[пакеты Tor](https://ubuntu.pkgs.org/20.04/ubuntu-universe-arm64/tor_0.4.2.7-1_arm64.deb.html)
+
+[исходники Tor](https://www.torproject.org/download/tor/)
+[что делать с исходниками](https://community.torproject.org/onion-services/setup/install/)
+
+[Установка репозитория](https://support.torproject.org/apt/tor-deb-repo/)
+
 [Установка репозитория Tor](https://support-torproject-org.translate.goog/relay-operators/operators-4/?_x_tr_sl=auto&_x_tr_tl=ru&_x_tr_hl=ru)
 
 [Tor - рецепты, подсказки](https://hackware.ru/?p=10530)
