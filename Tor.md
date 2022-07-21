@@ -1,4 +1,105 @@
 # Tor
+
+
+### Решение для Debian
+
+В Debain (stretch 9.13) сработало сдедущее решение.
+Установка Tor:
+```
+$ sudo apt install tor
+```
+
+Всё!!! (был установлен Tor версии 0.2.9.16)
+
+Дальше надо [[Узнать версию дистрибутива|проверить версию]] и соединение. IP должен быть разным:
+```
+$ tor --version
+$ netstat -ltupan | grep 905
+$ wget -qO - https://api.ipify.org; echo
+$ torsocks wget -qO - https://api.ipify.org; echo
+```
+
+Дальше, откорректировать файл `/etc/tor/torrc` и добавить в него:
+
+```
+SOCKSPort 9050
+SOCKSPort 9052
+```
+
+Перезапустить Tor:
+```
+$ sudo service tor restart
+```
+
+Убедиться, что Tor висит на этих портах:
+```
+$ netstat -ltupan | grep 905
+```
+
+[это сработало в Debian](https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux)
+
+##### TroubleShooting
+[исправление проблем](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox)
+
+После клонирования репозитория с проектом, [[Puppeteer]] отказался запускать Chromium. Для исправления ошибки в код создания сеанса надо добавить строки:
+```
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
+```
+
+Тестовый скрипт, который сработал:
+```
+const puppeteer = require('puppeteer');
+
+(async _ => {
+  await start(9050);
+  await start(9052);
+  process.exit();
+})()
+
+async function start(port) {
+  try{
+    const browser = await puppeteer.launch({
+      headless: true, // hide browser
+
+      args: [
+	  	`--proxy-server=socks5://127.0.0.1:${port}`, 
+		'--no-sandbox', 
+		'--disable-setuid-sandbox',
+		],
+    });
+
+    const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(300000);
+    const ip = await page.goto('https://api.ipify.org').then((res) => res.text());
+    await browser.close();
+    console.log('ip: ', ip)
+  }
+  catch(error){
+    console.log('error: ', error.message)
+  }
+}
+```
+
+### Почитать
+
+[Установка репозитория Tor](https://support-torproject-org.translate.goog/relay-operators/operators-4/?_x_tr_sl=auto&_x_tr_tl=ru&_x_tr_hl=ru)
+
+[Tor - рецепты, подсказки](https://hackware.ru/?p=10530)
+
+
+
+
+
+
+### Не работает
+>Для настройки используются два файла  torcc и torsocks.conf
+>https://линуксблог.рф/napravlyaem-ves-trafik-cherez-tor-v-linux/
+
+
+[новое решение](https://forum.ubuntu.ru/index.php?topic=314401.0)
+
 1. [Копать сюда](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html)
 
 Получить свой IP адрес с помощью [[wget]]:
@@ -17,7 +118,6 @@ $ wget -qO - https://api.ipify.org
 
 [Настройка мостов](https://zalinux.ru/?p=6049)
 
-[Tor - рецепты, подсказки](https://hackware.ru/?p=10530)
 
 [Настройка Proxy](https://hackware.ru/?p=10201)
 
@@ -108,7 +208,7 @@ $ sudo service tor restart
 Или попробовать так:
 ```
 $ sudo /etc/init.d/tor restart
-$ sudo /etc/init.d/privoxy restart # Эту команду я не проверял
+$ sudo /etc/init.d/privoxy restart
 ```
 
 
@@ -144,3 +244,4 @@ DOCKER-ISOLATION-STAGE-2  all  --  anywhere             anywhere
 RETURN     all  --  anywhere             anywhere            
 ```
 
+#tor
