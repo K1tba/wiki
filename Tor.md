@@ -140,6 +140,7 @@ _Приоритетно:_ [Использование torsocks](https://linuxcon
 
 - [iptables для чайников](https://losst.ru/nastrojka-iptables-dlya-chajnikov)
 - [iptables how to](https://help.ubuntu.com/community/IptablesHowTo)
+- [обнулить firewall](https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules-ru)
 
 Посмотреть состояние:
 ```
