@@ -1,88 +1,29 @@
 # Tor
 
+### [[Решение для Debian]]
 
-### Решение для Debian
-
-В Debain (stretch 9.13) сработало сдедущее решение.
-Установка Tor:
-```
-$ sudo apt install tor
-```
-
-Всё!!! (был установлен Tor версии 0.2.9.16)
-
-Дальше надо [[Узнать версию дистрибутива|проверить версию]] и соединение. IP должен быть разным:
-```
-$ tor --version
-$ netstat -ltupan | grep 905
-$ wget -qO - https://api.ipify.org; echo
-$ torsocks wget -qO - https://api.ipify.org; echo
-```
-
-Дальше, откорректировать файл `/etc/tor/torrc` и добавить в него:
-
-```
-SOCKSPort 9050
-SOCKSPort 9052
-```
-
-Перезапустить Tor:
-```
-$ sudo service tor restart
-```
-
-Убедиться, что Tor висит на этих портах:
-```
-$ netstat -ltupan | grep 905
-```
-
-[это сработало в Debian](https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux)
-
-##### TroubleShooting
-[исправление проблем](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox)
-
-После клонирования репозитория с проектом, [[Puppeteer]] отказался запускать Chromium. Для исправления ошибки в код создания сеанса надо добавить строки:
-```
-const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-});
-```
-
-Тестовый скрипт, который сработал:
-```
-const puppeteer = require('puppeteer');
-
-(async _ => {
-  await start(9050);
-  await start(9052);
-  process.exit();
-})()
-
-async function start(port) {
-  try{
-    const browser = await puppeteer.launch({
-      headless: true, // hide browser
-
-      args: [
-	  	`--proxy-server=socks5://127.0.0.1:${port}`, 
-		'--no-sandbox', 
-		'--disable-setuid-sandbox',
-		],
-    });
-
-    const page = await browser.newPage();
-    await page.setDefaultNavigationTimeout(300000);
-    const ip = await page.goto('https://api.ipify.org').then((res) => res.text());
-    await browser.close();
-    console.log('ip: ', ip)
-  }
-  catch(error){
-    console.log('error: ', error.message)
-  }
-}
-```
+### [[Варианты для Ubuntu]]
 
 ### Почитать
+#### Toriptables
+[toriptables](https://hackware.ru/?p=3138)
+У программы всего две значимых опции: **-l** и **-f**
+```
+-h, --help   показать справку и выйти
+-l, --load   Эта опция загрузит правила tor iptables
+-f, --flush  Эта опция сбросит правила iptables за стандартные
+```
+
+```
+git clone https: //github.com/ruped24/toriptables2
+cd toriptables2/
+sudo mv toriptables2.py /usr/local/bin/
+cd
+toriptables2.py -h
+```
+
+
+
 
 [пакеты Tor](https://ubuntu.pkgs.org/20.04/ubuntu-universe-arm64/tor_0.4.2.7-1_arm64.deb.html)
 
