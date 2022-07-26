@@ -25,6 +25,6 @@
 
 "Подтянуть" отстающую ветку
 ```
-git checkout first
-git merge first main
+git checkout main
+git merge first
 ```
