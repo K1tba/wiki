@@ -1,5 +1,5 @@
 # Puppeteer
-Мощная штука для [[Parsing|парсинга]]. Можно использовать анонимное подключение через Tor.
+Мощная штука для [[Parsing|парсинга]]. Можно использовать анонимное подключение через Tor. Можно обходить [[Обнаружение ботов|обнаружение ботов]] и решать каптчу.
 
 [[Автоматизация 1С с помощью Puppeteer| ]]
 
@@ -25,3 +25,5 @@ https://github.com/puppeteer/puppeteer/blob/v1.14.0/lib/USKeyboardLayout.js
 https://github.com/puppeteer/puppeteer/blob/v1.14.0/docs/api.md#keyboardpresskey-options
 
 https://oxylabs.io/blog/puppeteer-tutorial
+
+#puppeteer
