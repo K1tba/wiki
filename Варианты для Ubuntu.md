@@ -1,5 +1,22 @@
 # Варианты для Ubuntu
 
+Установка Tor:
+```
+$ sudo apt install tor
+```
+
+(был установлен Tor версии 0.4.7.8)
+Работает без privoxy.
+
+##### Проверка
+
+```
+$ tor --version
+$ netstat -ltupan | grep 905
+$ wget -qO - https://api.ipify.org; echo
+$ torsocks wget -qO - https://api.ipify.org; echo
+```
+
 ##### Конфигурация
  /etc/tor/torrc
 ```
@@ -21,7 +38,7 @@ TorPort 9050
 OnionAddrRange 127.42.42.0/24
 ```
 
-список [[Узнать список, установленных пакетов|установленных пакетов]]
+##### Cписок [[Узнать список, установленных пакетов|установленных пакетов]]
 
 deb.torproject.org-keyring/now 2022.04.27.1 all [установлен, локальный]
 gir1.2-appindicator3-0.1/focal,now 12.10.1+20.04.20200408.1-0ubuntu1 amd64 [установлен]
@@ -45,22 +62,22 @@ usb-creator-common/focal,now 0.3.7 amd64 [установлен, автомати
 usb-creator-gtk/focal,now 0.3.7 amd64 [установлен, автоматически]
 
 
-##### ~~~
-1. torsocks может не работать из-за того, что [не открыт порт](https://www.binarytides.com/proxify-applications-with-torsocks/) на котором Tor будет прослушивать локальные подключения от [[Tor]] (9051)
-/etc/tor/torrc
+##### Trouble shooting
+1. Пакет privoxy в файле конфигурации __/etc/bash.bashrc__ требует указания следующих строк:
 ```
-SocksPort 9050
-ControlPort 9051
+export all_proxy="socks://localhost:9050/"
+export http_proxy="http://localhost:8118/"
+export https_proxy="http://localhost:8118/"
+export no_proxy="localhost,127.0.0.1,::1,192.168.1.1,192.168.0.1"
 ```
+
+После удаления пакета __privoxy__ из-за этих настроек упал [[NodeJS]], npm пакеты перестали устанавливаться. Т.к. пакет privoxy был удалён, то в системе не было процесса слушающего порт 8118, а трафик шёл как раз через этот порт.
+
+
 
 2. попробовать поставить утилиту [Nyx](https://manpages.ubuntu.com/manpages/impish/man1/nyx.1.html) для мониторинга Tor из репозиториев [[Ubuntu]]
 
-3. Debian не использует репозитории Tor. Попробовать [[Список репозиториев|закомментировать репозитории]] в Ubuntu и установить [[Tor]]
+3.  Логи /var/log/tor
 
-4. Проверить все ли пакеты установлены ориентируясь на [[Решение для Debian|зависимости tor в Debian]]. Для вывода [[Узнать список, установленных пакетов|списка установленных пакетов]].
-
-5. Посмотреть [[Решение для Debian|конфигурацию torsocks]] в файле /etc/tot/torsocks.conf
-
-6. Посмотреть логи
-- /var/log/tor
+#tor
  
