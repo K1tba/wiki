@@ -9,7 +9,7 @@ CREATE TABLE books (id SERIAL PRIMARY KEY, title text);
 Простое указание `SERIAL` не делает его первичным ключом.
 
 ### Возврат изменённых данных
-При вызовет комант на добавление, изменения или удаление данных [[PostgreSQL]] может возвращать измененные данные. Пример:
+При вызовет команд на добавление, изменения или удаление данных [[PostgreSQL]] может возвращать измененные данные. Пример:
 ```
 INSERT INTO books (title) VALUES ('GeoS') RETURNING *;
 UPDATE books SET title='Honor' WHERE id=1 RETURNING id, title AS main_title;

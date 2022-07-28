@@ -5,6 +5,7 @@
 Установка: `npm i pg`
 
 [Документация](https://node-postgres.com/)
+[Описание ошибок](https://www.postgresql.org/docs/current/errcodes-appendix.html)
 
 Пример простого запроса:
 ```
