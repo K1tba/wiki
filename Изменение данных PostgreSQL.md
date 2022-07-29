@@ -16,3 +16,5 @@ UPDATE books SET title='Honor' WHERE id=1 RETURNING id, title AS main_title;
 DELETE FROM books WHERE id=1 RETURNING *;
 ```
 [Почитать про RETURNING](https://www.postgresql.org/docs/current/dml-returning.html)
+
+#returning
