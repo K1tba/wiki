@@ -6,6 +6,8 @@
 - #### [Спецификация RFC2616](https://datatracker.ietf.org/doc/html/rfc2616)
 - #### [HTTP dev.mozilla](https://developer.mozilla.org/ru/docs/Web/HTTP)
 - #### [FETCH Standart](https://fetch.spec.whatwg.org/)
+- [Авторизация OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)
+- [Ошибки авторизации Authorization](https://datatracker.ietf.org/doc/html/rfc6750)
 -  [Лучшее объяснение HTTPS SSL/TLS](https://howhttps.works/)
 - [web безопасность](https://infosec.mozilla.org/guidelines/web_security)
 - [Политика того же происхождения](https://en.wikipedia.org/wiki/Same-origin_policy)
