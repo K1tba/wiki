@@ -1,5 +1,8 @@
 # PostgreSQL
-[Документация](https://www.postgresql.org/docs/)
+### Почитать
+- [Документация](https://www.postgresql.org/docs/)
+- [Оф. документация на русском](https://postgrespro.ru/docs/postgresql)
+- [wiki.postgresql](https://wiki.postgresql.org/wiki/Main_Page/ru)
 
 ### [[node-postgres]]
 
