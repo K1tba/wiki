@@ -3,6 +3,7 @@
 - [Пользователи в LINUX](https://techlist.top/linux-users-types-of-users/)
 - [Как узнать IP-адрес Linux](https://losst.ru/kak-uznat-ip-adres-linux)
 - [Список пакетов GNU](https://www.gnu.org/software/software.html#allgnupkgs)
+- [Список тем про Bash в одном месте](https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md)
 
 
 Поиск по командам [[Docker]]-a и их описаниям совпадения с "cont":
