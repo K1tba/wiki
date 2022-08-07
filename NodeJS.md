@@ -4,6 +4,8 @@
 - [[nginx как прокси для nodejs]]
 - [[менеджер пакетов npm]]
 
+# [[PM2]]
+
 # Уроки
 [Создание проекта NodeJS от Microsoft](https://docs.microsoft.com/ru-ru/learn/modules/create-nodejs-project-dependencies/)
 
