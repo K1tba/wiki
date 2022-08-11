@@ -8,6 +8,9 @@ $ sudo apt install tor
 (был установлен Tor версии 0.4.7.8)
 Работает без privoxy.
 
+Мосты Tor:
+[получить мосты](https://bridges.torproject.org/options)
+
 ##### Проверка
 
 ```
