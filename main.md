@@ -8,6 +8,7 @@
 - ### [[MySQL]]
 - ### [[PostgreSQL]]
 - ### [[Markdown]]
+- ### [[YAML]]
 - ### [[SVG]]
 - ### [[Parsing]]
 - ### [[FreeJS]]
