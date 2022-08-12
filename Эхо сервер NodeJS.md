@@ -1,6 +1,6 @@
 # Эхо сервер NodeJS
 
-Пример простого эхо-сервера на [[NodeJS]] использованием [[Transform стримы|transform стрима]]:
+Пример простого эхо-сервера на [[NodeJS]] с использованием [[Transform стримы|transform стрима]]:
 
 ```
 const stream = require('stream');
