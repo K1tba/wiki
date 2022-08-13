@@ -3,6 +3,7 @@
 - ### [[HTTP]]
 - ### [[GIT]]
 - ### [[NodeJS]]
+- ### [[TypeScript]]
 - ### [[MongoDB]]
 - ### [[React]]
 - ### [[MySQL]]
