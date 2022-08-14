@@ -33,6 +33,27 @@ sudo apt install node-typescript
 	},
 	"include": ["."]
 }
+
+
 ```
+
+[Читать про компиляцию кода TypeScript](https://docs.microsoft.com/ru-ru/visualstudio/javascript/compile-typescript-code-npm?view=vs-2022)
+
+```
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist"
+  },
+  "include": [
+    "scripts/**/*"
+  ]
+}
+```
+
 
 #tsconfig #typescriptinstall
