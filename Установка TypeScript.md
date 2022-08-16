@@ -20,6 +20,18 @@ sudo apt install node-typescript
 
 После установки пакета `node-typescript` всё работает как надо.
 
+##### Windows
+Установка [[TypeScript]] не глобально. В принципе всё тоже самое что и для [[Ubuntu]]:
+```
+npm i -D typescript
+```
+
+Но, компилятор тоже упадёт с ошибкой. Т.к. в Windows его надо вызывать так:
+```
+npx tsc
+```
+
+
 ##### tsconfig.json
 
 ```

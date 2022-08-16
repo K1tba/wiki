@@ -9,10 +9,21 @@ CREATE TABLE products (
 )
 -- или использовать сокращение
 CREATE TABLE products (
-	id integer SERIAL,
+	id SERIAL,
 	title text
 )
+-- или использовать длинные uid
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE TABLE users (
+  	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	title text
+);
 ```
+
+>Если используется `nextval('products_id_seq')`, то сначала надо создать последовательноcть ([подробнее здесь](https://www.postgresql.org/docs/current/sql-createsequence.html)):
+>`CREATE SEQUENCE product_id_seq;`
+>Читай также про [функции управления последовательностями](https://www.postgresql.org/docs/14/functions-sequence.html).
+
 При этом если выполнить запись в таблицу с установкой такого поля, то запись будет произведена, но счётчик всё равно не собъется и продолжит увеличиваться.
 
 Пример:
