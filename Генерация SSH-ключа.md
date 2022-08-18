@@ -3,7 +3,14 @@
 [статья на github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 1) генерация SSH-ключа
-`$ ssh-keygen -t ed25519 -C "your_email@example.com"`
+```shell
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+>**Примечание.** Если вы используете устаревшую систему, которая не поддерживает алгоритм Ed25519, используйте:
+```shell
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 2) добавление вашего SSH-ключа в ssh-agent
 ```
