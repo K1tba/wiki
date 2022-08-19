@@ -1,5 +1,4 @@
 # main
-asd
 
 - ### [[Ubuntu]]
 - ### [[HTTP]]
