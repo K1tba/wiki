@@ -1,18 +1,10 @@
-# [testpage ](http://google.com) # _fdsasdas_
-asd [[# __m>a#in__]]adasd adsas dasd
+# Test page
 
-- ### Привет мир!!!
+- ### [[TypeScript]] sdfs
 
-### Супер информация
-lorem __ipsum__ lamp go __home__
-_dolor_ bla
+- ###         world
+2. string
 
-sit amet _sdfsdf
-sdfsff_
-
-
-
-
-boom
+any text
 
 #testpage
