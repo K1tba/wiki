@@ -31,6 +31,10 @@ npm i -D typescript
 npx tsc
 ```
 
+Чтобы можно было вызывать компилятор без `npx` надо установить [[TypeScript]] глобально:
+```
+npm i -g typescript
+```
 
 ##### tsconfig.json
 
