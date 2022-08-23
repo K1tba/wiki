@@ -1,6 +1,6 @@
 # Test page
 
-- ### [[TypeScript]] sdfs
+- ### [[        Type                                               Script          ]] sdfs
 
 - ###         world
 2. string
