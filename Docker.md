@@ -6,7 +6,7 @@
 
 [Остановить/Удалить все Docker контейнеры/images](https://linux-notes.org/ostanovit-udalit-vse-docker-kontejnery/)
 
-Аосмотреть список контейнеров
+Посмотреть список контейнеров
 ```
 
 $ sudo docker container ls -a
