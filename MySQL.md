@@ -1,7 +1,9 @@
 # MySQL
 
-[[Лимиты MySQL]]
-[[Турбо экспорт данных MariaDB]]
+[MariaDB: учебник для начинающих](https://mariadb.com/kb/ru/a-mariadb-primer/)
+
+### [[Лимиты MySQL]]
+### [[Турбо экспорт данных MariaDB]]
 
 Для запуска сеанса из консоли надо вызвать команду
 ```
@@ -12,8 +14,7 @@ $ mariadb -u user_name -p
 $ mysql -u user_name -p
 ```
 
-[MariaDB: учебник для начинающих](https://mariadb.com/kb/ru/a-mariadb-primer/)
-
+### Некоторые команды
 Показать все доступные БД
 ```
 SHOW DATABASES;
@@ -67,4 +68,8 @@ SELECT * FROM temptable;
 UPDATE test T SET full=(SELECT manager FROM temptable M WHERE T.code=M.code);
 ```
 
+### [[Дамп БД MySQL]]
 ### [[SQL JOINS]]
+
+
+#mysql #mariadb
