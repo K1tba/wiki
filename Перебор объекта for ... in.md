@@ -67,3 +67,5 @@ for(const k in obj) {
 
 }
 ```
+
+[Документация по интерфейсам](https://www.typescriptlang.org/docs/handbook/interfaces.html)
