@@ -32,3 +32,5 @@ server.on('request', (req, res) => {
 
 server.listen(3500);
 ```
+
+#ee #eventemitter

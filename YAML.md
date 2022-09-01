@@ -28,7 +28,7 @@ lorem: >
   BSc in the Internet of Things
   ```
   
-  Ковертируется в:
+  Конвертируется в:
   ```
   {
     "name": "Martin D'vloper",
