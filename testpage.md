@@ -1,12 +1,2 @@
-Выведет в консоль:
-
-```
-<Buffer d1 84 d1 84 d1 84 d1 84 d1>
-<Buffer 84 d1 84 d1 84 d1 84 d1 84>
-<Buffer d1 84 d1 84 d1 84 d1 84 d1>
-<Buffer 84 d1 84 d1 84 d1 84 d1 84>
-<Buffer d1 84 d1 84>
-```
-
-
-Для обработки этой ситуации sdf
+- [Создание и публикация пакета npm [[TypeScript]]](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
+- [Советы о публикации пакета npm](https://blog.npmjs.org/post/165769683050/publishing-what-you-mean-to-publish)
