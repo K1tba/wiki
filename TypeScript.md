@@ -4,6 +4,7 @@
 - [online песочница](https://www.typescriptlang.org/play)
 
 ### [[Установка TypeScript]]
+### [[Использование nodemon в TypeScript]]
 ### [[Установка типов для NodeJS]]
 ### [[Старт проекта]]
 ### [[Типы в TypeScript]]

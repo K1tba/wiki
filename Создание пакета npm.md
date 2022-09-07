@@ -1,5 +1,39 @@
 # Создание пакета npm
 
+### Пошагово
+
+1. Создать [[GIT]] репозиторий
+2. [[менеджер пакетов npm|Инициировать]] проект
+3. Добавить файл `.gitignore`
+4. Установить [[TypeScript]] в качестве зависимости
+```
+npm i --save-dev typescript
+```
+5. [[Старт проекта|Создать конфигурационный]] файл [[TypeScript]]
+```json
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, 
+    "skipLibCheck": true
+  },
+  "include": ["./src"],
+  "exclude": ["./node_modules"]
+}
+```
+
+>Важно: обязательно указать `"declaration": true` для компиляции файлов `*.d.ts`
+
+6. Собрать проект
+7. 
+
+
+
 ### Некоторые вопросы про создание [[менеджер пакетов npm|npm]] пакета [[TypeScript]]
 
 - Куда помещать typescript и javascript файлы?  

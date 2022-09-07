@@ -2,6 +2,11 @@
 
 ## [[Методы HTTP]]
 
+## [[CORS]]
+
+## Почитать
+- [Почему сайт должен весить не более 14кБ](https://habr.com/ru/post/684836/)
+
 - #### [Спецификации HTTP](https://httpwg.org/specs/)
 - #### [Спецификация RFC2616](https://datatracker.ietf.org/doc/html/rfc2616)
 - #### [HTTP dev.mozilla](https://developer.mozilla.org/ru/docs/Web/HTTP)
@@ -22,6 +27,3 @@
 - [OAuth 2.0 простым и понятным языком](https://habr.com/ru/company/vk/blog/115163/)
 - [Зачем нужен Refresh Token, если есть Access Token?](https://habr.com/ru/company/Voximplant/blog/323160/)
 - [Принципы построения REST JSON API](https://habr.com/ru/post/447322/)
-
-## Почитать
-- [Почему сайт должен весить не более 14кБ](https://habr.com/ru/post/684836/)
