@@ -121,6 +121,9 @@ npm init @eslint/config
 Подробно про настройку [[Тестирование TypeScript|тестирования TypeScript]]
 
 
+#### 10. Почитать про скрипты package.json
+https://docs.npmjs.com/cli/v8/using-npm/scripts
+
 #### Примеры конфигов
 
 package.json
@@ -129,7 +132,7 @@ package.json
 	"name": "md-conv",
 	"version": "0.0.1",
 	"description": "markdown converter",
-	"main": "index.js",
+	"main": "lib/Converter.js",
 	"scripts": {
 		"test": "jest --config jest.config.js",
 		"build": "tsc",
