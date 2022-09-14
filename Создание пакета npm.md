@@ -5,11 +5,6 @@
 
 #### 1. Создать [[GIT]] репозиторий
 #### 2. [[NPM|Инициировать]] проект
-
-```bash
-npm init
-```
-
 #### 3. Добавить файл `.gitignore`
 В файле `.gitignore`, помимо прочего целесообразно указать директорию для файлов сборки пакета. Пример файла:
 
@@ -125,6 +120,109 @@ npm init @eslint/config
 #### 9. Добавить тесты
 Подробно про настройку [[Тестирование TypeScript|тестирования TypeScript]]
 
+
+#### Примеры конфигов
+
+package.json
+```json
+{
+	"name": "md-conv",
+	"version": "0.0.1",
+	"description": "markdown converter",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --config jest.config.js",
+		"build": "tsc",
+		"lint": "eslint ./src",
+		"lint:fix": "eslint ./src --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GeoS74/md-conv.git"
+	},
+	"keywords": [
+		"markdown",
+		"html",
+		"converter"
+	],
+	"author": "GeoS",
+	"license": "ISC",
+	"bugs": {
+	"url": "https://github.com/GeoS74/md-conv/issues"
+	},
+	"homepage": "https://github.com/GeoS74/md-conv#readme",
+	"devDependencies": {
+		"@types/jest": "^29.0.2",
+		"@typescript-eslint/eslint-plugin": "^5.37.0",
+		"@typescript-eslint/parser": "^5.37.0",
+		"eslint": "^8.23.1",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"jest": "^29.0.3",
+		"ts-jest": "^29.0.1",
+		"typescript": "^4.8.3"
+	},
+	"files": ["./lib/**/*"]
+}
+```
+
+
+tsconfig.json
+```json
+{
+	"compilerOptions": {
+		"target": "es2020", 
+		"module": "commonjs", 
+		"declaration": true,
+		"outDir": "./lib", 
+		"esModuleInterop": true, 
+		"forceConsistentCasingInFileNames": true, 
+		"strict": true, 
+		"skipLibCheck": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/test/*"]
+}
+```
+
+.eslintrc.js
+```js
+module.exports = {
+	env: {
+		"browser": true,
+		"es2021": true
+	},
+	extends: [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"airbnb-base",
+		"airbnb-typescript/base"
+	],
+	overrides: [],
+	parser: "@typescript-eslint/parser",
+	parserOptions: {
+		project: './tsconfig.json'
+	},
+	plugins: ["@typescript-eslint"],
+	rules: {
+		'no-param-reassign': 'off',
+		'class-methods-use-this': 'off',
+		'no-restricted-syntax': 'off',
+		'import/prefer-default-export': 'off',
+	}
+}
+```
+
+
+jest.config.js
+```js
+module.exports = {
+	clearMocks: true,
+	coverageProvider: "v8",
+	transform: {
+		"^.+\\.(t|j)sx?$": "ts-jest"
+	},
+};
+```
 
 ### Некоторые вопросы про создание [[NPM|npm]] пакета [[TypeScript]]
 
