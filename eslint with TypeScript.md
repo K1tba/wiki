@@ -56,7 +56,7 @@ npx eslint .
 	root: true,
 	ignorePatterns: ['*.js'],
 	parserOptions: {
-	project: './tsconfig.json'
+		project: './tsconfig.json'
 	},
 	rules: {
 		'react/jsx-filename-extension': 'off',

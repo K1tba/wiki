@@ -3,7 +3,7 @@
 - [справочник NodeJS на русском](https://nodejsdev.ru/)
 - [[nginx как прокси для nodejs]]
 
-### [[менеджер пакетов npm]]
+### [[NPM]]
 ### [[NVM]]
 ### [[Стримы]]
 ### [[EventEmitter]]

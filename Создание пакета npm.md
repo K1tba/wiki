@@ -1,16 +1,39 @@
 # Создание пакета npm
 Хорошая [статья](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c) про создание [[npm]] пакета [[TypeScript]]
 
-### Пошагово
+### Пошаговое руководство
 
-1. Создать [[GIT]] репозиторий
-2. [[менеджер пакетов npm|Инициировать]] проект
-3. Добавить файл `.gitignore`
-4. Установить [[TypeScript]] в качестве зависимости
+#### 1. Создать [[GIT]] репозиторий
+#### 2. [[NPM|Инициировать]] проект
+
+```bash
+npm init
 ```
+
+#### 3. Добавить файл `.gitignore`
+В файле `.gitignore`, помимо прочего целесообразно указать директорию для файлов сборки пакета. Пример файла:
+
+```
+node_modules
+/lib
+```
+
+#### 4. Установить [[TypeScript]] в качестве зависимости
+```bash
 npm i --save-dev typescript
 ```
-5. [[Старт проекта|Создать конфигурационный]] файл [[TypeScript]]
+
+#### 5. [[Старт проекта|Создать конфигурационный]] файл [[TypeScript]]
+
+```bash
+tsc --init
+```
+
+В файле `tsconfig.json` надо добавить директивы `include` и `exclude`. В директории `outDir` указать путь каталога файлов сборки, а также установить `declaration` в `true`.
+
+>Важно: обязательно указать `"declaration": true` для компиляции файлов `*.d.ts`. Typescript также экспортирует определения типов вместе с скомпилированным кодом javascript, поэтому пакет можно использовать как с Typescript, так и с Javascript
+
+Файл `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
@@ -23,19 +46,87 @@ npm i --save-dev typescript
     "strict": true, 
     "skipLibCheck": true
   },
-  "include": ["./src"],
-  "exclude": ["./node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/test/*"]
 }
 ```
 
->Важно: обязательно указать `"declaration": true` для компиляции файлов `*.d.ts`
 
-6. Собрать проект
-7. 
+#### 6. Собрать проект
+В файле `package.json` прописать скрипт сборки проекта:
+```json
+{
+...
+	script: {
+		"build": "tsc"
+	}
+...
+}
+```
+
+#### 7. Настроить линтер
+
+Установить линтер и пакеты TypeScript:
+
+```bash
+npm install --save-dev eslint-config-airbnb-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint
+```
+
+Создать конфигурационный файл:
+```bash
+npm init @eslint/config
+```
+
+В файле `.eslintrc.js` в директории `extends` добавить:
+```js
+"extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-base",
+        "airbnb-typescript/base"
+    ],
+```
+
+В директории `parserOptions` указать:
+
+```js
+"parserOptions": {
+      "project": './tsconfig.json'
+    },
+```
+
+Прописать команды запуска линтера в `package.json`:
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+```
+
+Настроить правила для линтера.
+
+#### 8. Указать "белый" список файлов для публикации
+
+Можно внести файлы/папки в черный список в файле **.npmignore**, но это не лучшая идея, т.к. придётся постоянно добавлять туда записи при появлении новых файлов.
+Лучше всего указать файлы для публикации в `package.json`:
+
+```json
+{
+"files": ["./lib/**/*"]
+}
+```
+
+В публикуемый пакет будет включена только папка lib! ( **README.md** и **package.json** добавляются по умолчанию).
 
 
+#### 9. Добавить тесты
+Подробно про настройку [[Тестирование TypeScript|тестирования TypeScript]]
 
-### Некоторые вопросы про создание [[менеджер пакетов npm|npm]] пакета [[TypeScript]]
+
+### Некоторые вопросы про создание [[NPM|npm]] пакета [[TypeScript]]
 
 - Куда помещать typescript и javascript файлы?  
 	*Ответ: Куда вам удобно*
