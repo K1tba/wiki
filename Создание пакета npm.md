@@ -114,7 +114,7 @@ npm init @eslint/config
 }
 ```
 
-В публикуемый пакет будет включена только папка lib! ( **README.md** и **package.json** добавляются по умолчанию).
+В публикуемый пакет будет включена только папка lib! ( **README.md** и **package.json** добавляются по умолчанию). Подробнее [здесь](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
 
 
 #### 9. Добавить тесты
