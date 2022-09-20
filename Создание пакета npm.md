@@ -36,6 +36,7 @@ tsc --init
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
+    "declarationDir": "./types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true, 
@@ -110,11 +111,11 @@ npm init @eslint/config
 
 ```json
 {
-"files": ["./lib/**/*"]
+"files": ["lib", "types"]
 }
 ```
 
-В публикуемый пакет будет включена только папка lib! ( **README.md** и **package.json** добавляются по умолчанию). Подробнее [здесь](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
+В публикуемый пакет будет включена только папки `lib` и `types`! ( **README.md** и **package.json** добавляются по умолчанию). Подробнее [здесь](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
 
 
 #### 9. Добавить тесты
@@ -124,6 +125,60 @@ npm init @eslint/config
 #### 10. Почитать про скрипты package.json
 https://docs.npmjs.com/cli/v8/using-npm/scripts
 
+#### 11. Некоторые замечания по файлам типов
+
+Для того чтобы пакет можно было нормально использовать в проектах надо в файле `package.json` указать директиву с "основным" файлом и файлом с типами:
+```json
+{
+...
+	"main": "./lib/Converter",
+	"types": "./types/Converter"
+...
+}
+```
+
+Если этого не сделать, тогда не получится импортировать пакет в проект.
+
+Не совсем понятно как объединить файлы типов так, чтобы у них был единый файл "входа". Хорошо когда в пакете один файл типов, а если несколько?
+
+И, чтобы файлы с типами были опубликованы надо в `package.json` добавить директорию в `files`
+
+```json
+{
+...
+	"files": [
+	    "lib",
+	    "types"
+  ]
+}
+```
+
+#### 12. Опубликовать пакет
+
+>Чтобы опубликовать изменения в пакете, надо сделать коммит, вызвать `npm version patch`, а затем опубликовать
+
+Для регистрации:
+```
+npm adduser
+```
+
+Для авторизации:
+```
+npm login
+```
+
+Публикация пакета:
+```
+npm publish
+```
+
+Новая версия:
+```
+npm version patch
+```
+
+
+
 #### Примеры конфигов
 
 package.json
@@ -132,7 +187,8 @@ package.json
 	"name": "md-conv",
 	"version": "0.0.1",
 	"description": "markdown converter",
-	"main": "lib/Converter.js",
+	"main": "./lib/Converter.js",
+	"types": "./types/Converter"
 	"scripts": {
 		"test": "jest --config jest.config.js",
 		"build": "tsc",
@@ -164,7 +220,10 @@ package.json
 		"ts-jest": "^29.0.1",
 		"typescript": "^4.8.3"
 	},
-	"files": ["./lib/**/*"]
+	"files": [
+	    "lib",
+	    "types"
+  ]
 }
 ```
 
@@ -177,6 +236,7 @@ tsconfig.json
 		"module": "commonjs", 
 		"declaration": true,
 		"outDir": "./lib", 
+		"declarationDir": "./types",
 		"esModuleInterop": true, 
 		"forceConsistentCasingInFileNames": true, 
 		"strict": true, 
@@ -226,6 +286,10 @@ module.exports = {
 	},
 };
 ```
+
+
+
+
 
 ### Некоторые вопросы про создание [[NPM|npm]] пакета [[TypeScript]]
 
