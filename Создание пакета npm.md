@@ -271,7 +271,8 @@ module.exports = {
 		'class-methods-use-this': 'off',
 		'no-restricted-syntax': 'off',
 		'import/prefer-default-export': 'off',
-	}
+	},
+	ignorePatterns: ['*.test.ts'],
 }
 ```
 

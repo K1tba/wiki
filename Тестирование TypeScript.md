@@ -45,5 +45,43 @@ Jest выполняет код вашего проекта как JavaScript, н
 
 По умолчанию команда `jest --init` создаст файл `jest.config.ts`. Как запустить тесты с конфигом `.ts` я не понимаю, поэтому пришлось переписать на `.js`
 
+#### Типизация в JEST
+
+Есть два способа типизировать глобальные API Jest для тестовых файлов, написанных на TypeScript. 
+
+##### Вариант 1
+Можно использовать определения типов, которые поставляются с Jest и будут обновляться при каждом обновлении Jest. Просто импортируйте API из пакета @jest/globals.
+
+Установка:
+```bash
+npm i @jest/global
+```
+
+Использование:
+```ts
+import {describe,expect, test} from '@jest/globals';
+import { Converter } from '../Converter';
+
+test('Converter return string', () => {
+  expect(typeof converter.markdownToHTML('')).toBe('string');
+});
+```
+
+##### Вариант 2
+Или можно установить пакет @types/jest. Он предоставляет типы для глобальных переменных Jest без необходимости их импорта.
+
+Установка:
+```bash
+npm i @types/jest
+```
+
+Использование:
+```ts
+import { Converter } from '../Converter';
+
+test('Converter return string', () => {
+  expect(typeof converter.markdownToHTML('')).toBe('string');
+});
+```
 
 #jest #ts-jest

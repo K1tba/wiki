@@ -68,6 +68,8 @@ npx eslint .
 }
 ```
 
+>Если в файле tsconfig указана некая директория, которая не будет включаться в проект при компиляции (exclude), то при попытки линтинга файлов такой директории будет ошибка. Для её исправления нужно в файле .eslintrc указать, что такую директорию надо игнорировать (ignorePatterns)
+
 
 [Eslint with TypeScript](https://typescript-eslint.io/docs/)
 [Подробнее про eslintrc](https://eslint.org/docs/latest/user-guide/configuring/configuration-files)
