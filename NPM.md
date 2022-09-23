@@ -1,6 +1,6 @@
 # Менеджер пакетов NPM
 
->Интересный факт `npm` - это [не аббревиатура](https://twitter.com/npmjs/status/347057301401763840), но обычно его называют `node package manager`
+>Интересный факт `npm` - это [не аббревиатура](https://twitter.com/npmjs/status/347057301401763840), но обычно его называют `node package manager` или `no problem man`
 
 
 ### Инициализация проекта
