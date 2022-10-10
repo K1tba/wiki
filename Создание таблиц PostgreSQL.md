@@ -28,6 +28,7 @@ CREATE TABLE users (
 При этом если выполнить запись в таблицу с установкой такого поля, то запись будет произведена, но счётчик всё равно не собъется и продолжит увеличиваться.
 
 Пример:
+
 ```
 INSERT INTO products (title) VALUES ('book');
 INSERT INTO products (title) VALUES ('book');
