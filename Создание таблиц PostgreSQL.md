@@ -23,6 +23,7 @@ CREATE TABLE users (
 >Если используется `nextval('products_id_seq')`, то сначала надо создать последовательноcть ([подробнее здесь](https://www.postgresql.org/docs/current/sql-createsequence.html)):
 >`CREATE SEQUENCE product_id_seq;`
 >Читай также про [функции управления последовательностями](https://www.postgresql.org/docs/14/functions-sequence.html).
+>Читай про [SERIAL](https://postgrespro.ru/docs/postgresql/9.6/datatype-numeric#datatype-serial)
 
 При этом если выполнить запись в таблицу с установкой такого поля, то запись будет произведена, но счётчик всё равно не собъется и продолжит увеличиваться.
 
