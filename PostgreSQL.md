@@ -78,9 +78,9 @@ DELIMITER 'delimiter' CSV [HEADER] ENCODING 'UTF8';
 
 ### [[SQL JOINS]]
 
-### TRANCATE vs DELETE FROM
+### TRUNCATE vs DELETE FROM
 Trancate очищает таблицу вместе с индексами, статистикой и т.д. Delete только удаляет записи и всё. Поэтому Delete работает быстрее.
-[TRANCATE vs DELETE FROM](https://www.lob.com/blog/truncate-vs-delete-efficiently-clearing-data-from-a-postgres-table)
+[TRUNCATE vs DELETE FROM](https://www.lob.com/blog/truncate-vs-delete-efficiently-clearing-data-from-a-postgres-table)
 [Postgresql Truncation speed](https://stackoverflow.com/questions/11419536/postgresql-truncation-speed)
 
 ### Константы со спец. символами
