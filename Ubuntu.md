@@ -29,4 +29,6 @@ $ docker help | grep cont
 
 ### [[Alias (псевдонимы) команд]]
 
+### [[Установить deb пакет]]
+
 #ubuntu
