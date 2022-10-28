@@ -42,7 +42,7 @@ CREATE DATABASE foo ENCODING WIN1251 TEMPLATE template0;
 ### [[Дамп БД PostgreSQL]]
 ### [[Создание таблиц PostgreSQL]]
 ### [[Изменение данных PostgreSQL]]
-### Некоторые команды
+### Некоторые команды psql
 Показать список БД:
 `\l`
 
@@ -57,6 +57,10 @@ CREATE DATABASE foo ENCODING WIN1251 TEMPLATE template0;
 
 Данные таблицы:
 `\d table_name`
+
+Показать кофигурации полнотекстового поиска:
+`\dF`
+
 ### Турбозагрузка данных
 Работает по аналогии с [[Турбо экспорт данных MariaDB|турбо-загрузкой в MariaDB]] и по ощущениям даже быстрее...
 ```
