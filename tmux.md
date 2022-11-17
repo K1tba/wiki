@@ -96,5 +96,6 @@ $ source ~/.tmux.conf
 [страница проекта](https://github.com/tmux/tmux/wiki)
 [подробно про tmux](https://losst.ru/shpargalka-po-tmux)
 [шпаргалка с хабра](https://habr.com/ru/post/327630/)
+[расширенные возможности](https://habr.com/ru/post/516488/)
 
 #terminal #tmux #cli
