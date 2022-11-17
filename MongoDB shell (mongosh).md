@@ -4,6 +4,14 @@
 [Методы mongosh](https://www.mongodb.com/docs/mongodb-shell/reference/methods/)
 
 #### Данные сервера и БД
+
+Вывести список всех баз данных:
+```
+show dbs
+// или
+show databases
+```
+
 Получить имя текущей БД можно введя команду
 ```
 db
