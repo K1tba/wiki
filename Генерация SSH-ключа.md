@@ -28,3 +28,5 @@ $ clip < ~/.ssh/id_ed25519.pub
 ```
 $ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
+
+Читай про [[Доступ к серверу по SSH|доступ к серверу по SSH]]

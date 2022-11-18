@@ -23,4 +23,4 @@
 - #### [[Ботоферма]]
 - ### [[Portfolio]]
 
-#main #geos
+#main
