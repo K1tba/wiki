@@ -6,6 +6,7 @@
 - ### [[NodeJS]]
 - ### [[ECMAScript]]
 - ### [[TypeScript]]
+- ### [[Python]]
 - ### [[MongoDB]]
 - ### [[React]]
 - ### [[MySQL]]
