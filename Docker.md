@@ -1,22 +1,26 @@
 # Docker
 
 [Документация](https://docs.docker.com/engine/install/ubuntu/)
-
+[Видео про Docker](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 [Почитать про Docker](https://losst.ru/zapusk-kontejnera-docker)
 
-[Остановить/Удалить все Docker контейнеры/images](https://linux-notes.org/ostanovit-udalit-vse-docker-kontejnery/)
 
-Посмотреть список контейнеров
+Посмотреть установленную версию:
+```bash
+sudo docker version
 ```
 
-$ sudo docker container ls -a
+В Docker-e если вывести подсказку `docker --help`, то можно заметить, что есть команды, а есть команды управления. В принципе, команды - это по сути наиболее часто используемые команды из команд управления, только в более сокращенной версии. Пример, получение списка контейнеров:
+
+```bash
+// команда управления
+sudo docker container ls -a
+
+// просто команда
+sudo docker ps -a
 ```
 
-Удалить образ и контейнер
-```
-$ sudo docker image rm hello-world
-или
-$ sudo docker rmi fo9045fe1
 
-$sudo docer rm container_name
-```
+### [[Image - образы Docker]]
+### [[Контейнеры Docker]]
+
