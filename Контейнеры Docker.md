@@ -14,7 +14,7 @@ sudo docker ps --all
 
 ### Запуск контейнера
 
-Для созданияи запуска [[Контейнеры Docker|контейнера]] использовать:
+Для создания и запуска [[Контейнеры Docker|контейнера]] использовать:
 ```bash
 sudo docker run <image_name or image_id>
 ```
@@ -51,4 +51,16 @@ sudo docker rm <container_name or container_id>
 Для удаления всех остановленных контейнеров:
 ```bash
 sudo docker container prune
+```
+
+### Полезные команды
+
+Подключиться к запущенному контейнеру:
+```bash
+sudo docker attach <container_id>
+```
+
+Посмотреть вывод контейнера в stdout:
+```bash
+sudo docker logs <container_id>
 ```

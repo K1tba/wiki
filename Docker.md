@@ -22,5 +22,10 @@ sudo docker ps -a
 
 
 ### [[Image - образы Docker]]
+### [[файл dockerignore]]
+### [[файл Makefile]]
 ### [[Контейнеры Docker]]
+### [[Запуск кастомного контейнера]]
+### [[Флаги команд]]
 
+#docker
