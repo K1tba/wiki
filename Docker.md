@@ -3,7 +3,10 @@
 [Документация](https://docs.docker.com/engine/install/ubuntu/)
 [Видео про Docker](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 [Почитать про Docker](https://losst.ru/zapusk-kontejnera-docker)
+[Приложение NodeJS + Mongo](https://docs.docker.com/language/nodejs/develop/)
 
+Читай это: https://earthly.dev/blog/postgres-docker/
+И вот это: https://habr.com/ru/post/578744/
 
 Посмотреть установленную версию:
 ```bash
@@ -26,6 +29,8 @@ sudo docker ps -a
 ### [[файл Makefile]]
 ### [[Контейнеры Docker]]
 ### [[Запуск кастомного контейнера]]
+### [[Сети Docker контейнеров]]
 ### [[Флаги команд]]
+### [[Использование официальных образов]]
 
 #docker

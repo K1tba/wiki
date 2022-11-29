@@ -7,6 +7,7 @@
 ### [[node-postgres]]
 
 ### [[Установка PostgreSQL]]
+### [[Управление сервером PostgreSQL]]
 
 ### [[Подключение к psql]]
 

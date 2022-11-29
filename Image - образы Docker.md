@@ -147,3 +147,6 @@ sudo docker build -t foo:bar .
 ```bash
 sudo docker inspect <image_name>
 ```
+
+
+#image

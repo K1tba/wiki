@@ -5,8 +5,7 @@
 
 ```Makefile
 run:
-	docker run --rm --name foo -d -p 3000:3000 ifoo
-
+	docker run --rm --name foo -d -p 3000:3000 image_name
 stop:
 	docker stop -t 0 foo
 ```
