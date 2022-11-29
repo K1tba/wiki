@@ -5,9 +5,13 @@
 
 ```Makefile
 run:
-	docker run --rm --name foo -d -p 3000:3000 image_name
+	docker run --rm --network mynetwork -d -p 3002:3002 --name app -e DB_HOST=db -e POSTGRES_PASSWORD=admin app
 stop:
-	docker stop -t 0 foo
+	docker stop -t 0 app
+rundb:
+	docker run --rm --network mynetwork -d -p 5435:5432 --name db -e POSTGRES_PASSWORD=admin postgres
+stopdb:
+	docker stop -t 0 db
 ```
 
 Теперь можно запускать и останавливать контейнер так:
