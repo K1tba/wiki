@@ -23,6 +23,7 @@ sudo docker container ls -a
 sudo docker ps -a
 ```
 
+### [[Установка Docker]]
 
 ### [[Image - образы Docker]]
 ### [[файл dockerignore]]

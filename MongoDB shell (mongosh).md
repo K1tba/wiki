@@ -3,6 +3,7 @@
 [Документация](https://www.mongodb.com/docs/mongodb-shell/)
 [Методы mongosh](https://www.mongodb.com/docs/mongodb-shell/reference/methods/)
 
+#### [[Запуск mongosh]]
 #### Данные сервера и БД
 
 Вывести список всех баз данных:

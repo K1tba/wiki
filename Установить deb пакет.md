@@ -5,3 +5,5 @@
 ```bash
 sudo dpkg -i имя_пакета
 ```
+
+#dpkg

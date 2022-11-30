@@ -15,5 +15,6 @@
 ### [[try ... catch]]
 ### [[итератор matchAll]]
 ### [[eslint with TypeScript]]
+### [[Тестирование TypeScript]]
 
 #typescript
