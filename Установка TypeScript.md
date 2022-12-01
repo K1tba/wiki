@@ -20,6 +20,14 @@ sudo apt install node-typescript
 
 После установки пакета `node-typescript` всё работает как надо.
 
+При создании [[Контейнеры Docker|контейнеров]] [[Docker]] в скриптах файла `package.json`  для компиляции кода надо вызывать компилятор так: `npx tsc`.
+_package.json:_
+```json
+"scripts": {
+	"build": "npx tsc"
+}
+```
+
 ##### Windows
 Установка [[TypeScript]] не глобально. В принципе всё тоже самое что и для [[Ubuntu]]:
 ```
