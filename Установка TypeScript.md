@@ -2,7 +2,7 @@
 
 ##### [[Ubuntu]]
 
-- [start project](https://nodejs.dev/learn/nodejs-with-typescript)
+- [start project](https://nodejs.dev/en/learn/nodejs-with-typescript/)
 
 Установка [[TypeScript]] не глобально:
 ```
