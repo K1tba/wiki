@@ -7,7 +7,7 @@
 - # [[Python]]
 - # [[MongoDB]]
 - # [[React]]
-- ### [[MySQL]]
+- # [[MySQL]]
 - # [[PostgreSQL]]
 - # [[Docker]]
 - # [[Markdown]]
