@@ -12,8 +12,11 @@
 docker run -d --rm --name db --network darknet -p 9200:9200 -e "discovery.type=single-node" --memory=512m elasticsearch:7.17.7
 ```
 
+Флаг `discovery.type=singlr-node` не указан в руководстве по запуску [[Elasticsearch]] в Docker контейнере. [Узнать больше об этом флаге](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery-settings.html)
+__discovery.type__ - Указывает, должен ли Elasticsearch формировать кластер из нескольких узлов. По умолчанию `multi-node`, что означает, что Elasticsearch обнаруживает другие узлы при формировании кластера и позволяет другим узлам присоединяться к кластеру позже. Если установлено `single-node`, Эластичный поиск формирует кластер с одним узлом и подавляет тайм-аут, установленный `cluster.publish.timeout`. Для получения дополнительной информации о том, когда вы можете использовать это , см [. Обнаружение одного узла](https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html#single-node-discovery "Обнаружение одного узла") .
+
 Контейнер запускается не очень быстро. Если не отключаться от вывода, указав флаг `-it` или посмотреть логи, то можно увидеть, что при запуске генерируется достаточно большой лог.
-[Вот здесь](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) написано, что при запуске [[Elasticsearch]] в лог будет выведен сгенерированный пароль для пользователя `elastic` и токен для __Kibana__. Но, где они я так и не нашёл...
+[Вот здесь](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) написано, что при запуске [[Elasticsearch]] в лог будет выведен сгенерированный пароль для пользователя `elastic` и токен для __Kibana__. Для версии [[Image - образы Docker|образа]] `elasticsearch:7.17.7` пароль и токен не выводятся в лог.
 
 Для обращения к базе данных используется [[curl|утилита curl]].
 
@@ -39,3 +42,5 @@ curl -X GET localhost:9200
   "tagline" : "You Know, for Search"
 }
 ```
+
+### [[Версии образов Elscticsearch 7.17.7 vs 8.5.2]]

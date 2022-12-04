@@ -15,6 +15,14 @@ echo $ES
 
 ###  Создание записи
 
+###### v8.5.2:
+
+```bash
+curl -X POST --cacert ./http_ca.crt -u elastic "https://localhost:9200/customer/_doc/1?pretty" -H "Content-type: application/json" -d '{"users":{"name": "GeoS"}}' 
+```
+
+###### v7.17.7:
+
 ```bash
 curl -X POST "$ES/blog/post/1?pretty" -H "Content-type: application/json" -d '{"name": "GeoS", "weight": 68}'
 ```
