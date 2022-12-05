@@ -1,7 +1,6 @@
 # Elasticsearch
 
 [Основы Elasticsearch](https://habr.com/ru/post/280488/)
-[Подключение к Elasticsearch]
 [Использование Elasticsearch](https://losst.pro/ispolzovanie-elasticsearch)
 [Поиск в Elasticsearch](https://losst.pro/poisk-v-elasticsearch)
 
