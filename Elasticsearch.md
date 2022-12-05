@@ -9,11 +9,15 @@
 
 ### [[Конфигурация JVM в контейнере Elasticsearch]]
 
+### [[Конфигурация Elasticsearch]]
+
 ### [[Сертификаты безопасности и ключи Elasticsearch]]
 
 ### [[Установить пароль пользователя Elasticsearch]]
 
 ### [[Запуск Elasticsearch локально]]
+
+### [[REST API Elasticsearch]]
 
 ### [[Выполнение CRUD операций Elasticsearch]]
 
