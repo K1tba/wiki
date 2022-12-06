@@ -18,6 +18,8 @@
 
 ### [[REST API Elasticsearch]]
 
+### [[SQL запросы Elasticsearch]]
+
 ### [[Выполнение CRUD операций Elasticsearch]]
 
 ### [[Схема документа в Elasticsearch]]

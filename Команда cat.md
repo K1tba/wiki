@@ -10,6 +10,13 @@ curl "localhost:9200/_cat/?pretty"
 ```
 
 
+##### Получить список индексов
+[Подробнее про cat indices](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/cat-indices.html)
 
+Вывести список [[Index API|всех индексов]] можно так:
+
+```bash
+curl -X GET "http://localhost:9200/_cat/indices?v&pretty"
+```
 
 #cat
