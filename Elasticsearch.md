@@ -18,6 +18,8 @@
 
 ### [[REST API Elasticsearch]]
 
+### [[Типы полей данных Elasticsearch]]
+
 ### [[SQL запросы Elasticsearch]]
 
 ### [[Выполнение CRUD операций Elasticsearch]]
