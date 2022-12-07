@@ -24,7 +24,6 @@ sudo docker ps -a
 ```
 
 ### [[Установка Docker]]
-
 ### [[Image - образы Docker]]
 ### [[файл dockerignore]]
 ### [[файл Makefile]]
