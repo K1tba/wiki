@@ -5,27 +5,16 @@
 [Поиск в Elasticsearch](https://losst.pro/poisk-v-elasticsearch)
 
 ### [[Запуск контейнера Elasticsearch]]
-
 ### [[Конфигурация JVM в контейнере Elasticsearch]]
-
 ### [[Конфигурация Elasticsearch]]
-
 ### [[Сертификаты безопасности и ключи Elasticsearch]]
-
 ### [[Установить пароль пользователя Elasticsearch]]
-
 ### [[Запуск Elasticsearch локально]]
-
 ### [[REST API Elasticsearch]]
-
 ### [[Типы полей данных Elasticsearch]]
-
 ### [[SQL запросы Elasticsearch]]
-
 ### [[Выполнение CRUD операций Elasticsearch]]
-
 ### [[Схема документа в Elasticsearch]]
-
 ### [[NodeJS клиент Elasticsearch]]
 
 #elasticsearch
