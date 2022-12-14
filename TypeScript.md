@@ -2,6 +2,7 @@
 
 - [Документация](https://www.typescriptlang.org/docs)
 - [online песочница](https://www.typescriptlang.org/play)
+- [Карманная книга](https://typescript-handbook.ru/docs/ts-1)
 
 ### [[Установка TypeScript]]
 ### [[Использование nodemon в TypeScript]]

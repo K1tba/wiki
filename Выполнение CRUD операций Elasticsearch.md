@@ -113,3 +113,10 @@ curl -X GET "$ES/blog/post/1?pretty"
 ```bash
 curl -X DELETE "$ES/blog/post/1?pretty"
 ```
+
+
+### Удаление индекса
+
+```bash
+curl -X DELETE "$ES/<index_name>/?pretty"
+```
