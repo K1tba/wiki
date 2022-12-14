@@ -10,11 +10,16 @@
 ### [[Сертификаты безопасности и ключи Elasticsearch]]
 ### [[Установить пароль пользователя Elasticsearch]]
 ### [[Запуск Elasticsearch локально]]
-### [[REST API Elasticsearch]]
+
+## Описание
+### [[Создание индекса Elasticsearch]]
 ### [[Типы полей данных Elasticsearch]]
 ### [[SQL запросы Elasticsearch]]
 ### [[Выполнение CRUD операций Elasticsearch]]
 ### [[Схема документа в Elasticsearch]]
+
+## Использование
+### [[REST API Elasticsearch]]
 ### [[NodeJS клиент Elasticsearch]]
 
 #elasticsearch
