@@ -11,14 +11,19 @@
 ### [[Установить пароль пользователя Elasticsearch]]
 ### [[Запуск Elasticsearch локально]]
 
-## Описание
+## Использование
+### [[Получение информации об Elasticsearch]]
 ### [[Создание индекса Elasticsearch]]
+### [[Получить информацию об индексе]]
+### [[Добавление документа в индекс]]
+
+## Описание
 ### [[Типы полей данных Elasticsearch]]
 ### [[SQL запросы Elasticsearch]]
 ### [[Выполнение CRUD операций Elasticsearch]]
 ### [[Схема документа в Elasticsearch]]
 
-## Использование
+## API
 ### [[REST API Elasticsearch]]
 ### [[NodeJS клиент Elasticsearch]]
 
