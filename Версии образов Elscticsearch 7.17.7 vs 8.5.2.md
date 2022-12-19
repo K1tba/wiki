@@ -7,7 +7,7 @@
 ### Создание контейнера
 
 ```bash
-docker run --rm -t --name db -network darknet -p 9200:9200 -e "discovery.type=single-node" --memory=512m elasticsearch:8.5.2
+docker run --rm -t --name db -network darknet -p 9200:9200 -e "discovery.type=single-node" --memory=1g elasticsearch:8.5.2
 ```
 
 ### Подключение к контейнеру
@@ -40,6 +40,8 @@ docker run --rm -t --name db -network darknet -p 9200:9200 -e "discovery.type=si
   `docker run -e "ENROLLMENT_TOKEN=<token>" docker.elastic.co/elasticsearch/elasticsearch:8.5.2`
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+>В версии 8.5.2 информация (как показано выше) в таком виде будет выведена в консоль только если запускать контейнер с флагом `-t`, пример: `docker run -t <image_name>`
 
 Вместе с запросами надо передавать сертификат, сгенерированный при создании [[Контейнеры Docker|контейнера]]. [[Сертификаты безопасности и ключи Elasticsearch|Сертификат]]  лежит в контейнере здесь: `/usr/share/elasticsearch/config/certs/http_ca.crt`
 

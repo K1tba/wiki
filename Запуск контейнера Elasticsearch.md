@@ -1,7 +1,7 @@
 # Запуск контейнера Elasticsearch
 
-[Установка  Elasticsearch с Docer-ом](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docker.html#docker-cli-run-dev-mode)
-
+[Установка  Elasticsearch с Docer-ом](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docker.html#docker-cli-run-dev-mode) 
+[[Версии образов Elscticsearch 7.17.7 vs 8.5.2]]
 
 >Важно: при запуске контейнера желательно устанавливать [[Установить ограничение памяти для контейнера|ограничение на использование памяти]]. Иначе, запущенный контейнер быстро "вывешивает" хост систему.
 
