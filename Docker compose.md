@@ -34,6 +34,45 @@ services:
 docker compose down --volumes
 ```
 
+### Тома volumes
+
+Для доступа к сриптам инициализации базы данных можно смонтировать каталог с текущего хоста (см. пример выше), а можно использовать `volumes`. Основное отличие в использовании заключается в том, что при монтировании каталога не надо дополнительно указывать директиву `volumes:`, а при использовании томов - надо. Пример `docker-compose.yml`:
+```yml
+version: '1.0'
+services:
+  back_app:
+    build: .
+    volumes:
+      - myinitdb:/bimend-test/libs/
+    ports:
+      - "3500:3500"
+    environment:
+      - SERVER_PORT=3500
+      - DB_USER=bimend
+      - DB_HOST=db
+      - DB_NAME=bimend
+      - DB_PASS=admin
+  db:
+    image: "postgres"
+    volumes:
+      - myinitdb:/docker-entrypoint-initdb.d/
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=bimend
+      - POSTGRES_DB=bimend
+  front_app:
+    image: "geos74/test-task-front"
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - BACKEND_HOST=localhost
+      - BACKEND_PORT=3500
+volumes:
+  myinitdb:
+```
+
+
 ### Сети network
 
 При использовании Docker compose, сервисы включаются в автоматически создаваемую сеть и доступны по своим псевдонимам. В примере выше в контейнер `bridge_app` передаётся переменная `DB_HOST=db`, где `db` - это имя контейнера с базой данных  [[PostgreSQL]]. Также, контейнеры могут обращаться друг к другу по дефолтным портам.
