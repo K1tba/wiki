@@ -3,6 +3,7 @@
 - ### [[Ubuntu]]
 - ### [[HTTP]]
 - ### [[GIT]]
+- ### [[Nginx]]
 - ### [[NodeJS]]
 - ### [[ECMAScript]]
 - ### [[TypeScript]]
