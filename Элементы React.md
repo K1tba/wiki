@@ -2,7 +2,7 @@
 
 ### Создание элементов
 
-```
+```js
 //index.js
 
 import React from 'react';
@@ -19,8 +19,10 @@ root.render(
     })
 );
 ```
+
 Это эквивалентно следующему коду с использованием [[Расширения файлов .js vs .jsx|.jsx]]
-```
+
+```js
 //index.js
 
 import React from 'react';

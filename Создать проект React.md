@@ -1,13 +1,13 @@
 # Создать проект [[React]]
 
 Создать react проект с помощью [[NPM | npx]]:
-```
-$ npx create-react-app my-app
+```bash
+npx create-react-app my-app
 ```
 npx поставляется с [[NPM | npm]] начиная с версии 5.2+
 
 Создать react проект с помощью npm initializer (доступен начиная с npm 6+):
-```
+```bash
 npm init react-app my-app
 ```
 
@@ -15,9 +15,9 @@ npm init react-app my-app
 
 
 Можно создать проект с помощью npm с установкой временных пакетов:
-```
-$ npm install create-react-app
-$ create-react-app myApp
+```bash
+npm install create-react-app
+create-react-app myApp
 ```
 этот вариант я не проверял, т.к. не понятно куда после первой команды установятся npm-пакеты
 

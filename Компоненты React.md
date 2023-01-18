@@ -3,7 +3,7 @@
 Компоненты бывают классовые и функциональные.
 
 Пример классового компонента:
-```
+```js
 export class Menu extends React.Component { //или React.PureComponent
     render(props) {
         console.log(this.props) //доступ к props
@@ -19,7 +19,7 @@ export class Menu extends React.Component { //или React.PureComponent
 ```
 
 Пример функционального компонента:
-```
+```js
 export function Menu() {
     return <>
         <ul>
@@ -30,12 +30,14 @@ export function Menu() {
 }
 ```
 
+[[Пустой элемент в React|Читай про пустой элемент в React]]
+
 В классовом компоненте метод `render()` является обязательным. Доступ к _props_ и _state_ осуществляется через `this`. В функциональном компоненте первый аргумент функции это `props`, второй `state`.
 
 > В файлах компонентов надо импортировать React `import React from "react"` если используется версия до 18. Начиная с 18 версии React импортируется по дефолту.
 
 Внутри функции  рендеринга можно указывать условную логику отрисовки. Главное правило: должно что-то возвращаться. Пример:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{1 ? <Restaurant restaurant={restaurants[0]} /> : true}
@@ -43,7 +45,7 @@ export const Restaurants = ({restaurants}) => {
 }
 ```
 При этом вот так не сработает:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{
@@ -53,14 +55,14 @@ export const Restaurants = ({restaurants}) => {
 	</div>
 }
 ```
-Условная отрисовка позволяет использовать определённые простейшие логические операции. Конструкции типа `for(...)` также не работа.т внутри фигурных скобок.
+Условная отрисовка позволяет использовать определённые простейшие логические операции. Конструкции типа `for(...)` также не работают внутри фигурных скобок.
 >NOTE 
 >описать здесь React.CreateElement(...)
 #### Рендеринг компоненты
  Перерендеринг происходит при изменении пропсов, состояния или force-update
 #### Отрисовка нескольких компонентов
 Внутри фигурных скобок можно указывать несколько сомпонентов для отрисовки, в этом случае компоненты должны быть переданы массивом:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{
@@ -73,7 +75,7 @@ export const Restaurants = ({restaurants}) => {
 }
 ```
 Можно перебрать массив, полученный из пропсов и отрисовать компоненты:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{restaurants.map((rest) => <Restaurant restaurant={rest}/>)}
@@ -84,7 +86,7 @@ export const Restaurants = ({restaurants}) => {
 `Warning: Each child in a list should have a unique "key" prop.` Перев.: `Предупреждение: каждый дочерний элемент в списке должен иметь уникальный ключевой реквизит.`
 
 Чтобы исправить эту ошибку и убрать warning надо добавить атрибут __key__:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{restaurants.map((rest, index) => <Restaurant key={index} restaurant={rest}/>)}
@@ -97,7 +99,7 @@ export const Restaurants = ({restaurants}) => {
 >`Warning: Encountered two children with the same key, `1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.` Перев.: `Обнаружены два дочерних элемента с одним и тем же ключом «1». Ключи должны быть уникальными, чтобы компоненты сохраняли свою идентичность при обновлениях. Неуникальные ключи могут привести к дублированию и/или пропуску дочерних элементов — такое поведение не поддерживается и может измениться в будущей версии.`
 
 Пример передачи ключа:
-```
+```js
 export const Restaurants = ({restaurants}) => {
 	return <div>
 		{restaurants.map((rest) => <Restaurant key={rest.id} restaurant={rest}/>)}
@@ -110,7 +112,7 @@ export const Restaurants = ({restaurants}) => {
 Обновление ключа у существующего компонента приведет к перемонтированию всего компонента.
 
 #### [[Импорт SVG и других картинок|Импорт SVG]] как компонент
-```
+```js
 import {ReactComponent as Foo} from './imgs/thumb-up.svg'
 ...
 <Foo /> //для отрисовки

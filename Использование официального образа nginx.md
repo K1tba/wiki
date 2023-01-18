@@ -81,6 +81,16 @@ server {
 }
 ```
 
+>Идея в том, что при создании образа прокидывается не кастомная конфигурация, а шаблон конфигурации. Переменные можно использовать только в шаблонах.
+
+Файл `Dockerfile`:
+
+```Dockerfile
+FROM nginx
+COPY default.conf.template /etc/nginx/templates/default.conf.template
+COPY html /usr/share/nginx/html
+```
+
 Теперь в файле `docker-compose.yml` можно указать переменную `NODE_HOST`:
 
 ```yml
@@ -94,12 +104,4 @@ services:
       - "8080:80"
     environment:
       - NODE_HOST=front
-```
-
-Файл `Dockerfile`:
-
-```Dockerfile
-FROM nginx
-COPY default.conf.template /etc/nginx/templates/default.conf.template
-COPY html /usr/share/nginx/html
 ```

@@ -3,7 +3,7 @@
 По сути High Order Component (компонент высшего порядка) - это компонент обёртка для вынесения общего функционала для создания компонентов на уровень выше.
 
 Пример:
-```
+```js
 export function withHoc(WrappedComponent) {
     const WrapperComponent = ({ date, ...props }) => {
         if (date > new Date()) {

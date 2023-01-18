@@ -3,6 +3,7 @@
 - [Документация](https://www.typescriptlang.org/docs)
 - [online песочница](https://www.typescriptlang.org/play)
 - [Карманная книга](https://typescript-handbook.ru/docs/ts-1)
+- [Уроки от Microsoft](https://learn.microsoft.com/ru-ru/training/modules/typescript-get-started/)
 
 ### [[Установка TypeScript]]
 ### [[Использование nodemon в TypeScript]]
