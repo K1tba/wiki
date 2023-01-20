@@ -31,4 +31,27 @@ const Menu = ({menu, className}) => (
 );
 ```
 
+#### Импорт стилей в TypeScript
+
+[Пример](https://codesandbox.io/s/typescript-plugin-css-modules-0u1px?file=/src/index.tsx:69-112)
+
+В [[TypeScript]] для импорта стилей в виде модуля необходимо следующее:
+1) установить пакет `typescript-plugin-css-modules`
+2) в `tsconfig.json` добавить:
+```json
+"plugins": [
+      {
+          "name": "typescript-plugin-css-modules"
+      }
+```
+3) в корне проекта создать файл с глобальными [[Типы в TypeScript|типами]]. Например в `/src/types` создать файл `global.d.ts` и добавить в него следующий тип:
+```ts
+declare module "*.module.scss" {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+```
+
+Всё! Можно пользоваться :)
+
 #css #classnames

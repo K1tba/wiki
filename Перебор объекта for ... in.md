@@ -64,7 +64,20 @@ const obj: IFoo = {
 
 for(const k in obj) {
   console.log(obj[k]);
+}
 
+// или упрощенный вариант интерфейса
+interface IFoo {
+  [index: string]: string | number;
+}
+
+const obj: IFoo = {
+  name: 'Ann',
+  age: 15
+}
+
+for(const k in obj) {
+  console.log(obj[k]);
 }
 ```
 
