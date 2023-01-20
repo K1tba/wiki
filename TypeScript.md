@@ -18,5 +18,6 @@
 ### [[итератор matchAll]]
 ### [[eslint with TypeScript]]
 ### [[Тестирование TypeScript]]
+### [[TypeScript with React]]
 
 #typescript
