@@ -2,6 +2,8 @@
 
 [Читать про совместное использование TypeScript и React](https://create-react-app.dev/docs/adding-typescript/)
 
+[[Проблема нахождения файлов в компиляторе TypeScript]]
+
 Установить шаблон [[React]] приложения с поддержкой [[TypeScript]]:
 
 ```bash
