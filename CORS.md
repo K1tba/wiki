@@ -1,5 +1,7 @@
 # CORS
 
+[Спецификация CORS](https://fetch.spec.whatwg.org/#http-cors-protocol)
+
 Чтобы обойти блокировку CORS, сервер должен вернуть заголовок:
 ```
 Access-Control-Allow-Origin: 'http://localhost:3000'
