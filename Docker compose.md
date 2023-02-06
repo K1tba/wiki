@@ -80,3 +80,5 @@ volumes:
 
 
 #Dockercompose #compose
+
+### [[Передача булева значения в docker compose]]
