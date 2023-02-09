@@ -4,6 +4,7 @@
 - [online песочница](https://www.typescriptlang.org/play)
 - [Карманная книга](https://typescript-handbook.ru/docs/ts-1)
 - [Уроки от Microsoft](https://learn.microsoft.com/ru-ru/training/modules/typescript-get-started/)
+- [Задачки по TypeScript](https://github.com/type-challenges/type-challenges)
 
 ### [[Установка TypeScript]]
 ### [[Использование nodemon в TypeScript]]
