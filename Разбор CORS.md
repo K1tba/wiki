@@ -28,7 +28,7 @@ app.listen(3333, (error) => {
 ```
 
 Client (page.html):
-```html
+```
 <button onclick=_clicker()>click me</button>
 <script>
 
