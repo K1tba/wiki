@@ -1,4 +1,7 @@
 # CSS стили
+
+[[Flex box]]
+
 ##### Импорт глобальных стилей
 ```js
 import "./styles.css"
