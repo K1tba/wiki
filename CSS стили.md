@@ -34,6 +34,26 @@ const Menu = ({menu, className}) => (
 );
 ```
 
+
+##### Использование идентификаторов
+
+Использование идентификаторов элементов для задания стилей выглядит так:
+файл стилей `styles.module.css`:
+```css
+#accordion {
+	background-color: #1a1a1a !important;
+}
+```
+компонента:
+```tsx
+import styles from "./styles.module.css"
+
+function() {
+return <div id={styles.accordion}></div>
+}
+```
+
+
 #### Импорт стилей в TypeScript
 
 [Пример](https://codesandbox.io/s/typescript-plugin-css-modules-0u1px?file=/src/index.tsx:69-112)
