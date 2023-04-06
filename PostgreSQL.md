@@ -109,4 +109,6 @@ SELECT $Some Tag$foo'bar$Some Tag$;
 ### [[Полнотекстовый поиск]]
 ### [[Коды ошибок PostgreSQL]]
 
+### [[Работа с датой]]
+
 #postgreSQL #db
