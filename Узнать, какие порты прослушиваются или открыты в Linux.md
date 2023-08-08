@@ -12,6 +12,12 @@ $ sudo netstat -ltupan
 $ sudo netstat -ltupan | grep /tor
 ```
 
+### с помощью [[ss]]
+
+```
+$ sudo ss -ltn
+```
+
 ### Посмотреть какой порт соответствует какой службе
 Это информация в файле: /etc/services
 ```
