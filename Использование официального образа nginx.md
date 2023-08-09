@@ -10,7 +10,7 @@ FROM nginx
 COPY /my/path/to/file /usr/share/nginx/html
 ```
 
-Запуск котейнера:
+Запуск контейнера:
 ```bash
 docker build -t some-nginx .
 
@@ -18,6 +18,8 @@ docker run -d --rm --name app -p 8080:80 some-nginx
 ```
 
 ### Использование своей конфигурации
+
+Прежде чем продолжить прочитай про [[Конфигурация nginx | конфигурирование nginx]].
 
 Главный конфигурационный файл находится здесь: `/etc/nginx/nginx.conf`. Выглядит он примерно так:
 ```
@@ -51,7 +53,7 @@ http {
 }
 ```
 
-Директива `include` подключает все конфигурации из директории `/etc/nginx/conf.d`. Файл конфигурации должен иметь расширение `.conf`. По умолчанию в этой директории есть дефолтный конфиг в файле `default.conf`.
+В данном примере директива `include` подключает все конфигурации из директории `/etc/nginx/conf.d`. Файл конфигурации должен иметь расширение `.conf`. По умолчанию в этой директории есть дефолтный конфиг в файле `default.conf`.
 Для того, чтобы прокинуть свою конфигурацию можно в `Dockerfile` указать следующее:
 ```Dockerfile
 FROM nginx
@@ -105,3 +107,34 @@ services:
     environment:
       - NODE_HOST=front
 ```
+
+##### Попытка подмены дефолтной конфигурации с помощью volumes
+
+Если при создании образа использовался шаблон конфига, то при попытке запуска контейнера с прокидыванием томов конфигурация заменена не будет.
+
+Файл `Dockerfile`:
+
+```Dockerfile
+FROM nginx
+COPY default.conf.template /etc/nginx/templates/default.conf.template
+COPY html /usr/share/nginx/html
+```
+
+Далее создаём в текущей директории файл `default.conf` с какими-то иными инструкциями и пытаемся запустить образ с помощью [[Docker compose]]
+
+```yml
+version: '1.0'
+services:
+  front:
+    image: "simple-node"
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_HOST=front
+    volumes:
+	  - ./default.conf:/etc/nginx/conf.d/default.conf
+```
+
+Ничего не произойдёт, контейнер не подхватит файл `default.conf` из хост машины.

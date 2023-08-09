@@ -53,6 +53,16 @@ sudo docker rm <container_name or container_id>
 sudo docker container prune
 ```
 
+### Запуск команд в работающем контейнере
+
+```bash
+sudo docker exec -it <container_name> /bin/bash
+
+# или так
+sudo docker exec -it <container_name> bash
+```
+
+
 ### Полезные команды
 
 Подключиться к запущенному контейнеру:
