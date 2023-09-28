@@ -8,6 +8,7 @@
 - ### [[ECMAScript]]
 - ### [[TypeScript]]
 - ### [[Python]]
+- ### [[Java]]
 - ### [[MongoDB]]
 - ### [[React]]
 - ### [[MySQL]]
