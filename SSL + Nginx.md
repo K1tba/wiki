@@ -361,4 +361,4 @@ done
 - [Ещё одна инструкция](https://dvsemenov.ru/nastrojka-https-s-pomoshhyu-nginx-lets-encrypt-i-docker/)
 - [Образ certbot на docker hub](https://hub.docker.com/r/certbot/certbot)
 
-#ssl #nginx
+#ssl #nginx #https #certbot
