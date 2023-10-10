@@ -4,7 +4,9 @@
 - [Оф. документация на русском](https://postgrespro.ru/docs/postgresql)
 - [wiki.postgresql](https://wiki.postgresql.org/wiki/Main_Page/ru)
 
-### [[node-postgres]]
+### [[node-postgres|Использование с NodeJS]]
+
+### [[JDBC Postgres Java|Использование с Java]]
 
 ### [[Установка PostgreSQL]]
 ### [[Управление сервером PostgreSQL]]

@@ -39,13 +39,12 @@ server {
 }
 ```
 
->Директива `send_timeout` должна устанавливаться на уровне `http` конфигурации [[Nginx]]
 
 [Решение подсмотрено здесь](https://losst.pro/kak-ispravit-504-gateway-time-out-nginx)
 
 [Подробнее про директивы ngx_http_proxy_module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_read_timeout)
 
-[Подробнее про директивы ngx_http_core_module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_read_timeout)
+[Подробнее про директивы ngx_http_core_module](http://nginx.org/en/docs/http/ngx_http_core_module.html)
 
 
 #nginx
