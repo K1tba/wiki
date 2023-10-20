@@ -75,7 +75,7 @@ curl -L https://raw.githubusercontent.com/dancheskus/nginx-docker-ssl/master/ini
 - меняем пути, если меняли их в папке
 - `staging` временно ставим 1 (для теста) или 0 (если знаешь что делаешь)
 
-ВАЖНО!!! надо изменить пути получения данных на:
+ВАЖНО!!! надо изменить пути получения данных на эти (просто скопируй это):
 
 ```sh
 curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/_internal/tls_configs/options-ssl-nginx.conf > "$data_path/conf/options-ssl-nginx.conf"
@@ -83,8 +83,7 @@ curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/c
 curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/certbot/ssl-dhparams.pem > "$data_path/conf/ssl-dhparams.pem"
 ```
 
-
-Расширить права на этот файл и запустить его:
+[[chmod|Расширить права ]] на этот файл скрипта  и запустить его:
 
 ```bash
 chmod +x init-letsencrypt.sh
