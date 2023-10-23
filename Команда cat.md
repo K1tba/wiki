@@ -19,4 +19,26 @@ curl "localhost:9200/_cat/?pretty"
 curl -X GET "http://localhost:9200/_cat/indices?v&pretty"
 ```
 
+### Вставить текст в файл с помощью cat
+
+Классный вариант (сработал внутри [[Контейнеры Docker|контейнера docker]] где не было   `nano`):
+```bash
+$ cat > myfyle.txt <<EOF
+lorem
+ipsum
+EOF
+```
+
+Ещё один не плохой вариант:
+
+```bash
+$ cat >> myfile.txt
+lorem ipsum
+^D
+```
+
+где ^D - CTRL+D
+
+[[Вставить текст в файл Ubuntu]]
+
 #cat
