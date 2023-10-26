@@ -1,0 +1,23 @@
+# Redis
+
+[Документация](https://redis.io/docs/about/)
+
+> Redis означает REmote DIctionary Server (англ. сервер удалённого словаря)
+
+
+Есть 2 варианта: использовать Redis и использовать Redis-Stack. [[Image - образы Docker|Образов на hub.docker]] тоже несколько. [[NodeJS]] клиент [node-redis](https://github.com/redis/node-redis) использует образ [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server/) Подробнее про [[Использование официального образа redis-stack|использование официального образа redis-stack здесь.]]
+
+#### redis vs redis-server
+
+Как отмечено в [этом обсуждении](https://askubuntu.com/questions/1128572/redis-and-redis-server-packages) redis является мета-пакетом для redis-server. Это означает, что при установке на [[Ubuntu]] пакета redis будет установлен пакет redis-server.
+
+### [[Клиент node-redis]]
+
+
+[Взлом не защищённого экземпляра redis](http://antirez.com/news/96)
+
+
+
+
+
+#Redis
