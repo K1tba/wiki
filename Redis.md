@@ -7,6 +7,20 @@
 
 Есть 2 варианта: использовать Redis и использовать Redis-Stack. [[Image - образы Docker|Образов на hub.docker]] тоже несколько. [[NodeJS]] клиент [node-redis](https://github.com/redis/node-redis) использует образ [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server/) Подробнее про [[Использование официального образа redis-stack|использование официального образа redis-stack здесь.]]
 
+### [[Использование официального образа redis-stack|Образ redis-stack]]
+
+
+### Memory
+
+Посмотреть информацию о памяти можно запустив `redis-cli`, команды:
+- `memory info`
+- `config get maxmemory`
+
+```
+maxmemory 7000000
+maxmemory-policy allkeys-lfu
+maxmemory-eviction-tenacity 0
+```
 #### redis vs redis-server
 
 Как отмечено в [этом обсуждении](https://askubuntu.com/questions/1128572/redis-and-redis-server-packages) redis является мета-пакетом для redis-server. Это означает, что при установке на [[Ubuntu]] пакета redis будет установлен пакет redis-server.
