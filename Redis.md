@@ -9,24 +9,13 @@
 
 ### [[Использование официального образа redis-stack|Образ redis-stack]]
 
-
-### Memory
-
-Посмотреть информацию о памяти можно запустив `redis-cli`, команды:
-- `memory info`
-- `config get maxmemory`
-
-```
-maxmemory 7000000
-maxmemory-policy allkeys-lfu
-maxmemory-eviction-tenacity 0
-```
-#### redis vs redis-server
-
-Как отмечено в [этом обсуждении](https://askubuntu.com/questions/1128572/redis-and-redis-server-packages) redis является мета-пакетом для redis-server. Это означает, что при установке на [[Ubuntu]] пакета redis будет установлен пакет redis-server.
+### [[Мониторинг метрик Redis]]
 
 ### [[Клиент node-redis]]
 
+### redis vs redis-server
+
+Как отмечено в [этом обсуждении](https://askubuntu.com/questions/1128572/redis-and-redis-server-packages) redis является мета-пакетом для redis-server. Это означает, что при установке на [[Ubuntu]] пакета redis будет установлен пакет redis-server.
 
 [Взлом не защищённого экземпляра redis](http://antirez.com/news/96)
 
