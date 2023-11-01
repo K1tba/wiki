@@ -66,4 +66,20 @@ curl -I https://example.com
 ```
 
 
+##### Отправка файла на сервер формой
+
+Пример отправки файла на сервер с указанием MIME-типа файла:
+```bash
+curl -F file=@"C:/Users/User/Desktop/test.xlsx;type=application/vnd.ms-excel" http://localhost:3000/api/file/upload
+```
+
+При такой отправке сервер получит заголовок `Content-Type: multipart/form-data`
+
+Для отправки нескольких полей надо каждое начинать с флага `-F`:
+
+```bash
+curl -F name="GeoS" -F file=@"C:/Users/User/Desktop/test.xlsx;type=application/vnd.ms-excel" http://localhost:3000/api/file/upload
+```
+
+
 #curl #cli
