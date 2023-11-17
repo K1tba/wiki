@@ -22,6 +22,7 @@
 - ### [[Parsing]]
 - ### [[FreeJS]]
 - ### [[Telegram Bot]]
+- ### [[Browser plugins]]
 - ### [[Test]]
 
 ### Projects
