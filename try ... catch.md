@@ -74,4 +74,24 @@ if(isString(foo)) {
 1. [решение подсмотрено здесь](https://overcoder.net/q/1122469/%D0%B2-typescript-%D0%BA%D0%B0%D0%BA-%D0%B2%D1%8B-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82%D0%B5-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B8%D0%B5-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-node-%D0%B8-%D0%B2%D0%B0%D0%BD%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8-%D1%82%D0%B8%D0%BF%D0%B0%D0%BC%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA#3330283)
 2. [похожее решение, но выглядит сложнее](https://dev.to/jdbar/the-problem-with-handling-node-js-errors-in-typescript-and-the-workaround-m64)
 
+
+### Ошибки в Koa
+
+Проблема заключается в том, что `ctx.throw(...)` выбрасывает ошибку, которая имеет свойство `status`. Это свойство отсутствует в типе `Error` и в интерфейсе `NodeJS.ErrnoException`, зато есть в пакете с типами для Koa с названием `HttpError`. 
+Для обработок ошибок в Koa надо добавить пакет с типами `@types/koa`. 
+
+Пример обработки ошибки:
+
+```typescript
+app.use(async (ctx, next) => {
+  try {
+    ctx.throw(401, 'foo')
+  } catch(error) {
+    if(error instanceof HttpError) {
+      console.log(error.status);
+    }
+  }
+});
+```
+
 #error #ошибки #предикаты #trycatch
