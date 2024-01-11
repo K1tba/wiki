@@ -8,6 +8,8 @@
 
 ### [[Установка TypeScript]]
 ### [[Использование nodemon в TypeScript]]
+
+### [[Использование ts-node в TypeScript]]
 ### [[Установка типов для NodeJS]]
 ### [[Старт проекта]]
 ### [[Типы в TypeScript]]
