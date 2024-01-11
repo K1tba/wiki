@@ -1,6 +1,7 @@
 # TypeScript
 
 - [Документация](https://www.typescriptlang.org/docs)
+- [Глубокое погружение](https://igorfonin.gitbook.io/typescript-book-ru/)
 - [online песочница](https://www.typescriptlang.org/play)
 - [Карманная книга](https://typescript-handbook.ru/docs/ts-1)
 - [Уроки от Microsoft](https://learn.microsoft.com/ru-ru/training/modules/typescript-get-started/)
@@ -9,6 +10,7 @@
 ### [[Установка TypeScript]]
 ### [[Использование nodemon в TypeScript]]
 
+### [[Модули в TypeScript]]
 ### [[Использование ts-node в TypeScript]]
 ### [[Установка типов для NodeJS]]
 ### [[Старт проекта]]
