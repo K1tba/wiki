@@ -7,6 +7,7 @@
 
 Есть 2 варианта: использовать Redis и использовать Redis-Stack. [[Image - образы Docker|Образов на hub.docker]] тоже несколько. [[NodeJS]] клиент [node-redis](https://github.com/redis/node-redis) использует образ [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server/) Подробнее про [[Использование официального образа redis-stack|использование официального образа redis-stack здесь.]]
 
+### [[Установка redis на windows]]
 ### [[Использование официального образа redis-stack|Образ redis-stack]]
 
 ### [[Мониторинг метрик Redis]]
